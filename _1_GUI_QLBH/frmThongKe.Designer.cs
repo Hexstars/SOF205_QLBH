@@ -53,6 +53,7 @@
             ClientSize = new Size(800, 450);
             ControlBox = false;
             Controls.Add(dgvDS);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmThongKe";
             Text = "Sản phẩm nhập";
             WindowState = FormWindowState.Maximized;

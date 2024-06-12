@@ -177,6 +177,7 @@
             Controls.Add(label3);
             Controls.Add(lblMaXN);
             Controls.Add(lblEmail);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmCapNhatMK";
             Text = "Cập nhật mật khẩu";
             WindowState = FormWindowState.Maximized;

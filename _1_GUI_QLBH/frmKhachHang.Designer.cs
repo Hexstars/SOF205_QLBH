@@ -271,6 +271,7 @@
             Controls.Add(btnXoa);
             Controls.Add(btnThem);
             Controls.Add(dgvDS);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmKhachHang";
             Text = "Khách hàng";
             WindowState = FormWindowState.Maximized;

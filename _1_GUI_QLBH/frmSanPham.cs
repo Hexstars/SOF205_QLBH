@@ -150,21 +150,20 @@ namespace _1_GUI_QLBH
             }
             else
             {
+                string relativePath = "\\Images\\" + fileName;
                 DTO_SanPham sp = new DTO_SanPham(txtTen.Text, int.Parse(txtSL.Text), float.Parse(txtgiaNhap.Text), float.Parse(txtgiaBan.Text), "\\Images\\" + fileName, txtghiChu.Text, txtMaNV.Text);
 
                 if (busSanPham.InsertSP(sp))
                 {
                     Default();
                     LoadGridView_SanPham();
-                    // Kiểm tra và tạo thư mục đích nếu chưa tồn tại
                     string directoryPath = Path.GetDirectoryName(fileSavePath);
                     if (!Directory.Exists(directoryPath))
                     {
                         Directory.CreateDirectory(directoryPath);
                     }
-                    File.Copy(fileAddress, fileSavePath, true); //copy hình vào ứng dụng
+                    File.Copy(fileAddress, fileSavePath, true);
                     MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
                 }
                 else
                 {
@@ -241,14 +240,13 @@ namespace _1_GUI_QLBH
                 txtghiChu.Text = dgvDS.CurrentRow.Cells["ghichu"].Value.ToString();
                 txtMaNV.Text = dgvDS.CurrentRow.Cells["manv"].Value.ToString();
 
-
-                txtHinh.Text = dgvDS.CurrentRow.Cells["hinhanh"].Value.ToString();
-                checkImgUrl = txtHinh.Text;
-                string imagePath = Path.Combine(saveDirectory, dgvDS.CurrentRow.Cells["hinhanh"].Value.ToString());
+                string relativePath = dgvDS.CurrentRow.Cells["hinhanh"].Value.ToString();
+                string imagePath = Path.Combine(saveDirectory, relativePath.TrimStart('\\')); // Chuyển đổi thành đường dẫn tuyệt đối
 
                 if (File.Exists(imagePath))
                 {
                     picbox_anh.Image = Image.FromFile(imagePath);
+                    txtHinh.Text = imagePath;
                 }
                 else
                 {
@@ -259,22 +257,22 @@ namespace _1_GUI_QLBH
             //// Get the relative path of the image from the data grid
             //string relativeImagePath = dgvDS.CurrentRow.Cells["hinhanh"].Value.ToString();
 
-            //// Combine base directory with relative path to get full path
-            //string fullImagePath = Path.Combine(baseDirectory, relativeImagePath);
+                //// Combine base directory with relative path to get full path
+                //string fullImagePath = Path.Combine(baseDirectory, relativeImagePath);
 
-            //// Load and display the image in the PictureBox
-            //if (File.Exists(fullImagePath))
-            //{
-            //    picbox_anh.Image = Image.FromFile(fullImagePath);
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Image not found: " + fullImagePath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+                //// Load and display the image in the PictureBox
+                //if (File.Exists(fullImagePath))
+                //{
+                //    picbox_anh.Image = Image.FromFile(fullImagePath);
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Image not found: " + fullImagePath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //}
 
-            //    txtghiChu.Text = dgvDS.CurrentRow.Cells["ghichu"].Value.ToString();
-            //    txtMaNV.Text = dgvDS.CurrentRow.Cells["manv"].Value.ToString();
-            //}
+                //    txtghiChu.Text = dgvDS.CurrentRow.Cells["ghichu"].Value.ToString();
+                //    txtMaNV.Text = dgvDS.CurrentRow.Cells["manv"].Value.ToString();
+                //}
             else
             {
                 MessageBox.Show("Bảng trống", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -341,7 +339,7 @@ namespace _1_GUI_QLBH
                     //    GC.WaitForPendingFinalizers();
                     //}
 
-                    if (busSanPham.UpdateSP(sp))
+                    if (busSanPham.UpdateSP(sp, maHang))
                     {
                         //if (isImageUpdated)
                         //{

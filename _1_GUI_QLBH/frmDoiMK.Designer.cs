@@ -152,6 +152,7 @@
             Controls.Add(label3);
             Controls.Add(lblMKcu);
             Controls.Add(lblEmail);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmDoiMK";
             Text = "Đổi mật khẩu";
             WindowState = FormWindowState.Maximized;

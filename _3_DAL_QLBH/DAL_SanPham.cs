@@ -59,7 +59,7 @@ namespace _3_DAL_QLBH
         }
 
         //Sửa khách hàng
-        public bool UpdateSP(DTO_SanPham sp)
+        public bool UpdateSP(DTO_SanPham sp, int maHang)
         {
             try
             {
@@ -68,7 +68,7 @@ namespace _3_DAL_QLBH
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "UpdateSP";
                 cmd.Connection = conn;
-                cmd.Parameters.AddWithValue("@mahang", sp.MaHang);
+                cmd.Parameters.AddWithValue("@mahang", maHang);
                 cmd.Parameters.AddWithValue("@tenhang", sp.TenHang);
                 cmd.Parameters.AddWithValue("@soluong", sp.SoLuong);
                 cmd.Parameters.AddWithValue("@dongianhap", sp.donGiaNhap);

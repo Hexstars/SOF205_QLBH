@@ -20,9 +20,9 @@ namespace _2_BUS_QLBH
         {
             return dalSP.InsertSP(sp);
         }
-        public bool UpdateSP(DTO_SanPham sp)
+        public bool UpdateSP(DTO_SanPham sp, int maHang)
         {
-            return dalSP.UpdateSP(sp);
+            return dalSP.UpdateSP(sp, maHang);
         }
         public bool DeleteSP(int maHang)
         {

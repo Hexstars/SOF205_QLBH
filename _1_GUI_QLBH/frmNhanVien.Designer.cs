@@ -309,7 +309,7 @@
             Controls.Add(grpVT);
             Controls.Add(lblEmail);
             Controls.Add(txtEmail);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmNhanVien";
             Text = "Nhân viên";
             WindowState = FormWindowState.Maximized;
