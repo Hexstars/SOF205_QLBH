@@ -47,6 +47,7 @@
             txtDienThoai = new TextBox();
             lblMaNV = new Label();
             txtMaNV = new TextBox();
+            cboMaNV = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvDS).BeginInit();
             grpGT.SuspendLayout();
             SuspendLayout();
@@ -147,21 +148,22 @@
             // 
             lblDiaChi.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblDiaChi.AutoSize = true;
-            lblDiaChi.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDiaChi.Location = new Point(746, 92);
+            lblDiaChi.Font = new Font("Segoe UI", 15.7090912F);
+            lblDiaChi.Location = new Point(680, 45);
             lblDiaChi.Name = "lblDiaChi";
-            lblDiaChi.Size = new Size(65, 23);
+            lblDiaChi.Size = new Size(87, 32);
             lblDiaChi.TabIndex = 30;
-            lblDiaChi.Text = "Địa Chỉ";
+            lblDiaChi.Text = "Địa chỉ";
             // 
             // grpGT
             // 
             grpGT.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             grpGT.Controls.Add(rdoNu);
             grpGT.Controls.Add(rdoNam);
-            grpGT.Location = new Point(746, 137);
+            grpGT.Font = new Font("Segoe UI", 15.7090912F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            grpGT.Location = new Point(680, 107);
             grpGT.Name = "grpGT";
-            grpGT.Size = new Size(299, 42);
+            grpGT.Size = new Size(361, 62);
             grpGT.TabIndex = 26;
             grpGT.TabStop = false;
             grpGT.Text = "Phái";
@@ -169,9 +171,9 @@
             // rdoNu
             // 
             rdoNu.AutoSize = true;
-            rdoNu.Location = new Point(194, 16);
+            rdoNu.Location = new Point(232, 20);
             rdoNu.Name = "rdoNu";
-            rdoNu.Size = new Size(45, 23);
+            rdoNu.Size = new Size(64, 36);
             rdoNu.TabIndex = 4;
             rdoNu.TabStop = true;
             rdoNu.Text = "Nữ";
@@ -180,9 +182,9 @@
             // rdoNam
             // 
             rdoNam.AutoSize = true;
-            rdoNam.Location = new Point(80, 16);
+            rdoNam.Location = new Point(83, 20);
             rdoNam.Name = "rdoNam";
-            rdoNam.Size = new Size(56, 23);
+            rdoNam.Size = new Size(83, 36);
             rdoNam.TabIndex = 3;
             rdoNam.TabStop = true;
             rdoNam.Text = "Nam";
@@ -191,7 +193,8 @@
             // txtdiaChi
             // 
             txtdiaChi.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtdiaChi.Location = new Point(817, 89);
+            txtdiaChi.Font = new Font("Segoe UI", 13.7454548F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtdiaChi.Location = new Point(795, 42);
             txtdiaChi.Multiline = true;
             txtdiaChi.Name = "txtdiaChi";
             txtdiaChi.Size = new Size(228, 42);
@@ -200,53 +203,65 @@
             // lblTen
             // 
             lblTen.AutoSize = true;
-            lblTen.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTen.Location = new Point(137, 124);
+            lblTen.Font = new Font("Segoe UI", 15.7090912F);
+            lblTen.Location = new Point(82, 90);
             lblTen.Name = "lblTen";
-            lblTen.Size = new Size(85, 23);
+            lblTen.Size = new Size(121, 32);
             lblTen.TabIndex = 28;
             lblTen.Text = "Họ và Tên";
             // 
             // txtTen
             // 
-            txtTen.Location = new Point(228, 124);
+            txtTen.Font = new Font("Segoe UI", 13.7454548F);
+            txtTen.Location = new Point(214, 89);
             txtTen.Name = "txtTen";
-            txtTen.Size = new Size(251, 26);
+            txtTen.Size = new Size(251, 35);
             txtTen.TabIndex = 27;
             // 
             // lblDienThoai
             // 
             lblDienThoai.AutoSize = true;
-            lblDienThoai.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDienThoai.Location = new Point(133, 92);
+            lblDienThoai.Font = new Font("Segoe UI", 15.7090912F);
+            lblDienThoai.Location = new Point(78, 45);
             lblDienThoai.Name = "lblDienThoai";
-            lblDienThoai.Size = new Size(89, 23);
+            lblDienThoai.Size = new Size(125, 32);
             lblDienThoai.TabIndex = 25;
             lblDienThoai.Text = "Điện thoại";
             // 
             // txtDienThoai
             // 
-            txtDienThoai.Location = new Point(228, 92);
+            txtDienThoai.Font = new Font("Segoe UI", 13.7454548F);
+            txtDienThoai.Location = new Point(214, 42);
             txtDienThoai.Name = "txtDienThoai";
-            txtDienThoai.Size = new Size(251, 26);
+            txtDienThoai.Size = new Size(251, 35);
             txtDienThoai.TabIndex = 24;
             // 
             // lblMaNV
             // 
             lblMaNV.AutoSize = true;
-            lblMaNV.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblMaNV.Location = new Point(137, 156);
+            lblMaNV.Font = new Font("Segoe UI", 15.7090912F);
+            lblMaNV.Location = new Point(82, 135);
             lblMaNV.Name = "lblMaNV";
-            lblMaNV.Size = new Size(63, 23);
+            lblMaNV.Size = new Size(88, 32);
             lblMaNV.TabIndex = 32;
             lblMaNV.Text = "Mã NV";
             // 
             // txtMaNV
             // 
-            txtMaNV.Location = new Point(228, 156);
+            txtMaNV.Font = new Font("Segoe UI", 13.7454548F);
+            txtMaNV.Location = new Point(214, 134);
             txtMaNV.Name = "txtMaNV";
-            txtMaNV.Size = new Size(126, 26);
+            txtMaNV.Size = new Size(126, 35);
             txtMaNV.TabIndex = 31;
+            // 
+            // cboMaNV
+            // 
+            cboMaNV.Font = new Font("Segoe UI", 13.7454548F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cboMaNV.FormattingEnabled = true;
+            cboMaNV.Location = new Point(357, 134);
+            cboMaNV.Name = "cboMaNV";
+            cboMaNV.Size = new Size(139, 38);
+            cboMaNV.TabIndex = 33;
             // 
             // frmKhachHang
             // 
@@ -254,6 +269,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1133, 643);
             ControlBox = false;
+            Controls.Add(cboMaNV);
             Controls.Add(lblMaNV);
             Controls.Add(txtMaNV);
             Controls.Add(lblDiaChi);
@@ -304,5 +320,6 @@
         private TextBox txtDienThoai;
         private Label lblMaNV;
         private TextBox txtMaNV;
+        private ComboBox cboMaNV;
     }
 }
