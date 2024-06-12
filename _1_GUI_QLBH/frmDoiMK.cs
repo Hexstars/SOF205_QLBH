@@ -40,6 +40,12 @@ namespace _1_GUI_QLBH
                 txtMKmoi1.Focus();
                 return;
             }
+            else if (txtMKmoi1.Text.Trim().Length < 7)
+            {
+                MessageBox.Show("Mật khẩu mới phải dài hơn 7 kí tự", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMKmoi1.Focus();
+                return;
+            }
             else if (txtMKmoi2.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Nhập lại mật khẩu mới", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
