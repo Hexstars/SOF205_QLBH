@@ -49,6 +49,24 @@ namespace _3_DAL_QLBH
             finally { conn.Close(); }
             return false;
         }
+        public DataTable LayMK(string email) 
+        {
+            try
+            {
+                //Kết nối 
+                conn.Open();
+                string sql = $"select matkhau from nhanvien where email = '{email}'";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+
+                DataTable dtNhanVien = new DataTable();
+                dtNhanVien.Load(cmd.ExecuteReader());
+                return dtNhanVien;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
         public bool UpdateMK(string email, string matkhau)
         {
             try

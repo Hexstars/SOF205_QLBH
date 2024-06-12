@@ -32,7 +32,7 @@
             btnCapNhat = new Button();
             txtMKmoi2 = new TextBox();
             txtMKmoi1 = new TextBox();
-            txtMaXN = new TextBox();
+            txtMKcu = new TextBox();
             txtEmail = new TextBox();
             label4 = new Label();
             label3 = new Label();
@@ -63,6 +63,7 @@
             btnCapNhat.TabIndex = 18;
             btnCapNhat.Text = "Cập nhật";
             btnCapNhat.UseVisualStyleBackColor = false;
+            btnCapNhat.Click += btnCapNhat_Click;
             // 
             // txtMKmoi2
             // 
@@ -80,13 +81,13 @@
             txtMKmoi1.Size = new Size(240, 31);
             txtMKmoi1.TabIndex = 16;
             // 
-            // txtMaXN
+            // txtMKcu
             // 
-            txtMaXN.Font = new Font("Segoe UI", 11.7818184F);
-            txtMaXN.Location = new Point(291, 109);
-            txtMaXN.Name = "txtMaXN";
-            txtMaXN.Size = new Size(240, 31);
-            txtMaXN.TabIndex = 15;
+            txtMKcu.Font = new Font("Segoe UI", 11.7818184F);
+            txtMKcu.Location = new Point(291, 109);
+            txtMKcu.Name = "txtMKcu";
+            txtMKcu.Size = new Size(240, 31);
+            txtMKcu.TabIndex = 15;
             // 
             // txtEmail
             // 
@@ -146,7 +147,7 @@
             Controls.Add(btnCapNhat);
             Controls.Add(txtMKmoi2);
             Controls.Add(txtMKmoi1);
-            Controls.Add(txtMaXN);
+            Controls.Add(txtMKcu);
             Controls.Add(txtEmail);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -156,6 +157,7 @@
             Name = "frmDoiMK";
             Text = "Đổi mật khẩu";
             WindowState = FormWindowState.Maximized;
+            Load += frmDoiMK_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -166,7 +168,7 @@
         private Button btnCapNhat;
         private TextBox txtMKmoi2;
         private TextBox txtMKmoi1;
-        private TextBox txtMaXN;
+        private TextBox txtMKcu;
         private TextBox txtEmail;
         private Label label4;
         private Label label3;

@@ -151,18 +151,32 @@ namespace _1_GUI_QLBH
             else
             {
                 string relativePath = "\\Images\\" + fileName;
+
+                string startupPath = Application.StartupPath;
+                string imagesPath = Path.Combine(startupPath, "Images");
+
+                if (!Directory.Exists(imagesPath))
+                {
+                    Directory.CreateDirectory(imagesPath);
+                }
+
+                fileName = Path.GetFileName(txtHinh.Text);
+                string absolutePath = Path.Combine(imagesPath, fileName);
+
+                File.Copy(txtHinh.Text, absolutePath, true);
+
                 DTO_SanPham sp = new DTO_SanPham(txtTen.Text, int.Parse(txtSL.Text), float.Parse(txtgiaNhap.Text), float.Parse(txtgiaBan.Text), "\\Images\\" + fileName, txtghiChu.Text, txtMaNV.Text);
 
                 if (busSanPham.InsertSP(sp))
                 {
                     Default();
                     LoadGridView_SanPham();
-                    string directoryPath = Path.GetDirectoryName(fileSavePath);
-                    if (!Directory.Exists(directoryPath))
-                    {
-                        Directory.CreateDirectory(directoryPath);
-                    }
-                    File.Copy(fileAddress, fileSavePath, true);
+                    //string directoryPath = Path.GetDirectoryName(fileSavePath);
+                    //if (!Directory.Exists(directoryPath))
+                    //{
+                    //    Directory.CreateDirectory(directoryPath);
+                    //}
+                    //File.Copy(fileAddress, fileSavePath, true);
                     MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else

@@ -31,7 +31,10 @@ namespace _2_BUS_QLBH
         {
             return dalNV.VaiTroNV(email);
         }
-
+        public DataTable LayMK(string email) 
+        {
+            return dalNV.LayMK(email);
+        }
         //xử lí md5
         public string encryption(string password)
         {

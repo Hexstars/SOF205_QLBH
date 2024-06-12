@@ -299,7 +299,18 @@ namespace _1_GUI_QLBH
 
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Chính
+            frmDoiMK frm = new frmDoiMK();
+            if (!CheckExistForm("frmDoiMK"))
+            {
+                frm.MdiParent = this;
+                frm.WindowState = FormWindowState.Maximized; // Set the form to open maximized
+                frm.Dock = DockStyle.Fill; // Make sure the form fills the parent container
+                frm.Show();
+            }
+            else
+            {
+                ActiveChildForm("frmDoiMK");
+            }
         }
     }
 }
