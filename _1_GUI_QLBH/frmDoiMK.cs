@@ -34,7 +34,7 @@ namespace _1_GUI_QLBH
                 txtMKcu.Focus();
                 return;
             }
-            else if (txtMKmoi1.Text.Trim().Length == 0) 
+            else if (txtMKmoi1.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Nhập mật khẩu mới", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMKmoi1.Focus();
@@ -68,6 +68,11 @@ namespace _1_GUI_QLBH
                     txtMKmoi2.Clear();
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

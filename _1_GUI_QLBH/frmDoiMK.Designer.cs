@@ -42,22 +42,25 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.Top;
             button1.BackColor = Color.LimeGreen;
             button1.Font = new Font("Segoe UI", 18.3272724F);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(291, 346);
+            button1.Location = new Point(341, 347);
             button1.Name = "button1";
             button1.Size = new Size(240, 55);
             button1.TabIndex = 19;
             button1.Text = "Thoát";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // btnCapNhat
             // 
+            btnCapNhat.Anchor = AnchorStyles.Top;
             btnCapNhat.BackColor = Color.LimeGreen;
             btnCapNhat.Font = new Font("Segoe UI", 18.3272724F);
             btnCapNhat.ForeColor = Color.White;
-            btnCapNhat.Location = new Point(291, 285);
+            btnCapNhat.Location = new Point(341, 286);
             btnCapNhat.Name = "btnCapNhat";
             btnCapNhat.Size = new Size(240, 55);
             btnCapNhat.TabIndex = 18;
@@ -67,38 +70,43 @@
             // 
             // txtMKmoi2
             // 
+            txtMKmoi2.Anchor = AnchorStyles.Top;
             txtMKmoi2.Font = new Font("Segoe UI", 11.7818184F);
             txtMKmoi2.Location = new Point(291, 235);
             txtMKmoi2.Name = "txtMKmoi2";
-            txtMKmoi2.Size = new Size(240, 31);
+            txtMKmoi2.Size = new Size(331, 31);
             txtMKmoi2.TabIndex = 17;
             // 
             // txtMKmoi1
             // 
+            txtMKmoi1.Anchor = AnchorStyles.Top;
             txtMKmoi1.Font = new Font("Segoe UI", 11.7818184F);
             txtMKmoi1.Location = new Point(291, 174);
             txtMKmoi1.Name = "txtMKmoi1";
-            txtMKmoi1.Size = new Size(240, 31);
+            txtMKmoi1.Size = new Size(331, 31);
             txtMKmoi1.TabIndex = 16;
             // 
             // txtMKcu
             // 
+            txtMKcu.Anchor = AnchorStyles.Top;
             txtMKcu.Font = new Font("Segoe UI", 11.7818184F);
             txtMKcu.Location = new Point(291, 109);
             txtMKcu.Name = "txtMKcu";
-            txtMKcu.Size = new Size(240, 31);
+            txtMKcu.Size = new Size(331, 31);
             txtMKcu.TabIndex = 15;
             // 
             // txtEmail
             // 
+            txtEmail.Anchor = AnchorStyles.Top;
             txtEmail.Font = new Font("Segoe UI", 11.7818184F);
             txtEmail.Location = new Point(291, 46);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(240, 31);
+            txtEmail.Size = new Size(331, 31);
             txtEmail.TabIndex = 14;
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Top;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 15.7090912F);
             label4.Location = new Point(27, 235);
@@ -109,6 +117,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Top;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 15.7090912F);
             label3.Location = new Point(27, 172);
@@ -119,6 +128,7 @@
             // 
             // lblMKcu
             // 
+            lblMKcu.Anchor = AnchorStyles.Top;
             lblMKcu.AutoSize = true;
             lblMKcu.Font = new Font("Segoe UI", 15.7090912F);
             lblMKcu.Location = new Point(27, 107);
@@ -129,6 +139,7 @@
             // 
             // lblEmail
             // 
+            lblEmail.Anchor = AnchorStyles.Top;
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Segoe UI", 15.7090912F);
             lblEmail.Location = new Point(27, 46);
