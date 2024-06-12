@@ -27,8 +27,8 @@ namespace _1_GUI_QLBH
         {
             dgvDS.DataSource = TK.SanPhamNhap();
             dgvDS.Columns[0].HeaderText = "Mã NV";
-            dgvDS.Columns[0].HeaderText = "Tên NV";
-            dgvDS.Columns[0].HeaderText = "Số lượng";
+            dgvDS.Columns[1].HeaderText = "Tên NV";
+            dgvDS.Columns[2].HeaderText = "Số lượng";
         }
     }
 }

@@ -42,7 +42,7 @@
             // 
             txtEmail.Anchor = AnchorStyles.Top;
             txtEmail.Font = new Font("Segoe UI", 15.7090912F);
-            txtEmail.Location = new Point(206, 109);
+            txtEmail.Location = new Point(259, 188);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(421, 39);
             txtEmail.TabIndex = 0;
@@ -52,7 +52,7 @@
             lblDN.Anchor = AnchorStyles.Top;
             lblDN.AutoSize = true;
             lblDN.Font = new Font("Segoe UI", 24.2181816F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDN.Location = new Point(292, 32);
+            lblDN.Location = new Point(345, 111);
             lblDN.Name = "lblDN";
             lblDN.Size = new Size(246, 50);
             lblDN.TabIndex = 1;
@@ -63,7 +63,7 @@
             lblEmail.Anchor = AnchorStyles.Top;
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Segoe UI", 15.7090912F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblEmail.Location = new Point(66, 112);
+            lblEmail.Location = new Point(119, 191);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(71, 32);
             lblEmail.TabIndex = 2;
@@ -74,7 +74,7 @@
             lblMK.Anchor = AnchorStyles.Top;
             lblMK.AutoSize = true;
             lblMK.Font = new Font("Segoe UI", 15.7090912F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblMK.Location = new Point(66, 180);
+            lblMK.Location = new Point(119, 259);
             lblMK.Name = "lblMK";
             lblMK.Size = new Size(115, 32);
             lblMK.TabIndex = 3;
@@ -84,7 +84,7 @@
             // 
             txtMK.Anchor = AnchorStyles.Top;
             txtMK.Font = new Font("Segoe UI", 15.7090912F);
-            txtMK.Location = new Point(206, 180);
+            txtMK.Location = new Point(259, 259);
             txtMK.Name = "txtMK";
             txtMK.PasswordChar = '*';
             txtMK.Size = new Size(421, 39);
@@ -96,7 +96,7 @@
             btnDN.BackColor = Color.LimeGreen;
             btnDN.Font = new Font("Segoe UI", 18.3272724F);
             btnDN.ForeColor = Color.White;
-            btnDN.Location = new Point(276, 265);
+            btnDN.Location = new Point(329, 344);
             btnDN.Name = "btnDN";
             btnDN.Size = new Size(276, 56);
             btnDN.TabIndex = 5;
@@ -110,7 +110,7 @@
             btnThoat.BackColor = Color.LimeGreen;
             btnThoat.Font = new Font("Segoe UI", 18.3272724F);
             btnThoat.ForeColor = Color.White;
-            btnThoat.Location = new Point(276, 338);
+            btnThoat.Location = new Point(329, 417);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(276, 56);
             btnThoat.TabIndex = 6;
@@ -123,7 +123,7 @@
             chknhoEmail.Anchor = AnchorStyles.Top;
             chknhoEmail.AutoSize = true;
             chknhoEmail.Font = new Font("Segoe UI", 13.7454548F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            chknhoEmail.Location = new Point(206, 225);
+            chknhoEmail.Location = new Point(259, 304);
             chknhoEmail.Name = "chknhoEmail";
             chknhoEmail.Size = new Size(162, 34);
             chknhoEmail.TabIndex = 7;
@@ -135,7 +135,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(898, 542);
             ControlBox = false;
             Controls.Add(chknhoEmail);
             Controls.Add(btnThoat);

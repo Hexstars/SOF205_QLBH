@@ -39,6 +39,7 @@
             btnCapNhat = new Button();
             button1 = new Button();
             btnGuiMa = new Button();
+            lblDN = new Label();
             SuspendLayout();
             // 
             // lblEmail
@@ -46,7 +47,7 @@
             lblEmail.Anchor = AnchorStyles.Top;
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Segoe UI", 15.7090912F);
-            lblEmail.Location = new Point(227, 59);
+            lblEmail.Location = new Point(361, 160);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(71, 32);
             lblEmail.TabIndex = 0;
@@ -57,7 +58,7 @@
             lblMaXN.Anchor = AnchorStyles.Top;
             lblMaXN.AutoSize = true;
             lblMaXN.Font = new Font("Segoe UI", 15.7090912F);
-            lblMaXN.Location = new Point(148, 116);
+            lblMaXN.Location = new Point(282, 217);
             lblMaXN.Name = "lblMaXN";
             lblMaXN.Size = new Size(150, 32);
             lblMaXN.TabIndex = 1;
@@ -68,7 +69,7 @@
             label3.Anchor = AnchorStyles.Top;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 15.7090912F);
-            label3.Location = new Point(135, 181);
+            label3.Location = new Point(269, 282);
             label3.Name = "label3";
             label3.Size = new Size(163, 32);
             label3.TabIndex = 2;
@@ -79,7 +80,7 @@
             label4.Anchor = AnchorStyles.Top;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 15.7090912F);
-            label4.Location = new Point(40, 242);
+            label4.Location = new Point(174, 343);
             label4.Name = "label4";
             label4.Size = new Size(258, 32);
             label4.TabIndex = 3;
@@ -88,7 +89,7 @@
             // txtEmail
             // 
             txtEmail.Anchor = AnchorStyles.Top;
-            txtEmail.Location = new Point(304, 59);
+            txtEmail.Location = new Point(438, 160);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(240, 26);
             txtEmail.TabIndex = 4;
@@ -96,7 +97,7 @@
             // txtMaXN
             // 
             txtMaXN.Anchor = AnchorStyles.Top;
-            txtMaXN.Location = new Point(304, 122);
+            txtMaXN.Location = new Point(438, 223);
             txtMaXN.Name = "txtMaXN";
             txtMaXN.Size = new Size(240, 26);
             txtMaXN.TabIndex = 5;
@@ -104,7 +105,7 @@
             // txtMKmoi1
             // 
             txtMKmoi1.Anchor = AnchorStyles.Top;
-            txtMKmoi1.Location = new Point(304, 187);
+            txtMKmoi1.Location = new Point(438, 288);
             txtMKmoi1.Name = "txtMKmoi1";
             txtMKmoi1.PasswordChar = '*';
             txtMKmoi1.Size = new Size(240, 26);
@@ -113,7 +114,7 @@
             // txtMKmoi2
             // 
             txtMKmoi2.Anchor = AnchorStyles.Top;
-            txtMKmoi2.Location = new Point(304, 248);
+            txtMKmoi2.Location = new Point(438, 349);
             txtMKmoi2.Name = "txtMKmoi2";
             txtMKmoi2.PasswordChar = '*';
             txtMKmoi2.Size = new Size(240, 26);
@@ -125,7 +126,7 @@
             btnCapNhat.BackColor = Color.LimeGreen;
             btnCapNhat.Font = new Font("Segoe UI", 18.3272724F);
             btnCapNhat.ForeColor = Color.White;
-            btnCapNhat.Location = new Point(304, 292);
+            btnCapNhat.Location = new Point(438, 393);
             btnCapNhat.Name = "btnCapNhat";
             btnCapNhat.Size = new Size(240, 55);
             btnCapNhat.TabIndex = 8;
@@ -139,7 +140,7 @@
             button1.BackColor = Color.LimeGreen;
             button1.Font = new Font("Segoe UI", 18.3272724F);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(304, 353);
+            button1.Location = new Point(438, 454);
             button1.Name = "button1";
             button1.Size = new Size(240, 55);
             button1.TabIndex = 9;
@@ -152,7 +153,7 @@
             btnGuiMa.BackColor = Color.LimeGreen;
             btnGuiMa.Font = new Font("Segoe UI", 13.7454548F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnGuiMa.ForeColor = Color.White;
-            btnGuiMa.Location = new Point(550, 111);
+            btnGuiMa.Location = new Point(684, 212);
             btnGuiMa.Name = "btnGuiMa";
             btnGuiMa.Size = new Size(120, 45);
             btnGuiMa.TabIndex = 10;
@@ -160,12 +161,24 @@
             btnGuiMa.UseVisualStyleBackColor = false;
             btnGuiMa.Click += btnGuiMa_Click;
             // 
+            // lblDN
+            // 
+            lblDN.Anchor = AnchorStyles.Top;
+            lblDN.AutoSize = true;
+            lblDN.Font = new Font("Segoe UI", 24.2181816F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDN.Location = new Point(391, 52);
+            lblDN.Name = "lblDN";
+            lblDN.Size = new Size(334, 50);
+            lblDN.TabIndex = 11;
+            lblDN.Text = "QUÊN MẬT KHẨU";
+            // 
             // frmCapNhatMK
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1090, 687);
             ControlBox = false;
+            Controls.Add(lblDN);
             Controls.Add(btnGuiMa);
             Controls.Add(button1);
             Controls.Add(btnCapNhat);
@@ -199,5 +212,6 @@
         private Button btnCapNhat;
         private Button button1;
         private Button btnGuiMa;
+        private Label lblDN;
     }
 }

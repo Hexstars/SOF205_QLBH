@@ -39,18 +39,18 @@
             dgvDS.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvDS.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDS.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDS.Location = new Point(12, 12);
+            dgvDS.Location = new Point(38, 34);
             dgvDS.Name = "dgvDS";
             dgvDS.ReadOnly = true;
             dgvDS.RowHeadersWidth = 47;
-            dgvDS.Size = new Size(776, 426);
+            dgvDS.Size = new Size(1057, 567);
             dgvDS.TabIndex = 1;
             // 
             // frmThongKe
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1133, 643);
             ControlBox = false;
             Controls.Add(dgvDS);
             FormBorderStyle = FormBorderStyle.None;

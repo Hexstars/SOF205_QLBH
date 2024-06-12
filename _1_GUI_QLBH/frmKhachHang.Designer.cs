@@ -55,7 +55,7 @@
             // 
             txtTim.Anchor = AnchorStyles.Bottom;
             txtTim.BackColor = Color.LightGray;
-            txtTim.Location = new Point(283, 361);
+            txtTim.Location = new Point(449, 554);
             txtTim.Name = "txtTim";
             txtTim.Size = new Size(178, 26);
             txtTim.TabIndex = 23;
@@ -65,7 +65,7 @@
             // btnTim
             // 
             btnTim.Anchor = AnchorStyles.Bottom;
-            btnTim.Location = new Point(467, 353);
+            btnTim.Location = new Point(633, 546);
             btnTim.Name = "btnTim";
             btnTim.Size = new Size(86, 41);
             btnTim.TabIndex = 22;
@@ -76,7 +76,7 @@
             // btnLamMoi
             // 
             btnLamMoi.Anchor = AnchorStyles.Bottom;
-            btnLamMoi.Location = new Point(559, 400);
+            btnLamMoi.Location = new Point(725, 593);
             btnLamMoi.Name = "btnLamMoi";
             btnLamMoi.Size = new Size(86, 41);
             btnLamMoi.TabIndex = 21;
@@ -87,7 +87,7 @@
             // btnLuu
             // 
             btnLuu.Anchor = AnchorStyles.Bottom;
-            btnLuu.Location = new Point(467, 400);
+            btnLuu.Location = new Point(633, 593);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(86, 41);
             btnLuu.TabIndex = 20;
@@ -98,7 +98,7 @@
             // btnSua
             // 
             btnSua.Anchor = AnchorStyles.Bottom;
-            btnSua.Location = new Point(375, 400);
+            btnSua.Location = new Point(541, 593);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(86, 41);
             btnSua.TabIndex = 19;
@@ -109,7 +109,7 @@
             // btnXoa
             // 
             btnXoa.Anchor = AnchorStyles.Bottom;
-            btnXoa.Location = new Point(283, 400);
+            btnXoa.Location = new Point(449, 593);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(86, 41);
             btnXoa.TabIndex = 18;
@@ -120,7 +120,7 @@
             // btnThem
             // 
             btnThem.Anchor = AnchorStyles.Bottom;
-            btnThem.Location = new Point(191, 400);
+            btnThem.Location = new Point(357, 593);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(86, 41);
             btnThem.TabIndex = 17;
@@ -135,11 +135,11 @@
             dgvDS.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvDS.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDS.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDS.Location = new Point(12, 145);
+            dgvDS.Location = new Point(12, 217);
             dgvDS.Name = "dgvDS";
             dgvDS.ReadOnly = true;
             dgvDS.RowHeadersWidth = 47;
-            dgvDS.Size = new Size(776, 198);
+            dgvDS.Size = new Size(1109, 319);
             dgvDS.TabIndex = 16;
             dgvDS.Click += dgvDS_Click;
             // 
@@ -148,7 +148,7 @@
             lblDiaChi.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblDiaChi.AutoSize = true;
             lblDiaChi.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDiaChi.Location = new Point(461, 32);
+            lblDiaChi.Location = new Point(746, 92);
             lblDiaChi.Name = "lblDiaChi";
             lblDiaChi.Size = new Size(65, 23);
             lblDiaChi.TabIndex = 30;
@@ -159,7 +159,7 @@
             grpGT.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             grpGT.Controls.Add(rdoNu);
             grpGT.Controls.Add(rdoNam);
-            grpGT.Location = new Point(461, 77);
+            grpGT.Location = new Point(746, 137);
             grpGT.Name = "grpGT";
             grpGT.Size = new Size(299, 42);
             grpGT.TabIndex = 26;
@@ -191,7 +191,7 @@
             // txtdiaChi
             // 
             txtdiaChi.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtdiaChi.Location = new Point(532, 29);
+            txtdiaChi.Location = new Point(817, 89);
             txtdiaChi.Multiline = true;
             txtdiaChi.Name = "txtdiaChi";
             txtdiaChi.Size = new Size(228, 42);
@@ -201,7 +201,7 @@
             // 
             lblTen.AutoSize = true;
             lblTen.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTen.Location = new Point(51, 61);
+            lblTen.Location = new Point(137, 124);
             lblTen.Name = "lblTen";
             lblTen.Size = new Size(85, 23);
             lblTen.TabIndex = 28;
@@ -209,7 +209,7 @@
             // 
             // txtTen
             // 
-            txtTen.Location = new Point(142, 61);
+            txtTen.Location = new Point(228, 124);
             txtTen.Name = "txtTen";
             txtTen.Size = new Size(251, 26);
             txtTen.TabIndex = 27;
@@ -218,7 +218,7 @@
             // 
             lblDienThoai.AutoSize = true;
             lblDienThoai.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDienThoai.Location = new Point(47, 29);
+            lblDienThoai.Location = new Point(133, 92);
             lblDienThoai.Name = "lblDienThoai";
             lblDienThoai.Size = new Size(89, 23);
             lblDienThoai.TabIndex = 25;
@@ -226,7 +226,7 @@
             // 
             // txtDienThoai
             // 
-            txtDienThoai.Location = new Point(142, 29);
+            txtDienThoai.Location = new Point(228, 92);
             txtDienThoai.Name = "txtDienThoai";
             txtDienThoai.Size = new Size(251, 26);
             txtDienThoai.TabIndex = 24;
@@ -235,7 +235,7 @@
             // 
             lblMaNV.AutoSize = true;
             lblMaNV.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblMaNV.Location = new Point(51, 93);
+            lblMaNV.Location = new Point(137, 156);
             lblMaNV.Name = "lblMaNV";
             lblMaNV.Size = new Size(63, 23);
             lblMaNV.TabIndex = 32;
@@ -243,7 +243,7 @@
             // 
             // txtMaNV
             // 
-            txtMaNV.Location = new Point(142, 93);
+            txtMaNV.Location = new Point(228, 156);
             txtMaNV.Name = "txtMaNV";
             txtMaNV.Size = new Size(126, 26);
             txtMaNV.TabIndex = 31;
@@ -252,7 +252,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1133, 643);
             ControlBox = false;
             Controls.Add(lblMaNV);
             Controls.Add(txtMaNV);

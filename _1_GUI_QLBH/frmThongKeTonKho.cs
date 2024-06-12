@@ -27,7 +27,7 @@ namespace _1_GUI_QLBH
         {
             dgvDS.DataSource = TK.SanPhamTonKho();
             dgvDS.Columns[0].HeaderText = "Tên hàng";
-            dgvDS.Columns[0].HeaderText = "Số lượng";
+            dgvDS.Columns[1].HeaderText = "Số lượng";
         }
     }
 }

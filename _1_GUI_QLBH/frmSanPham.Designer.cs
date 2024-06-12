@@ -60,7 +60,7 @@
             // 
             txtTim.Anchor = AnchorStyles.Bottom;
             txtTim.BackColor = Color.LightGray;
-            txtTim.Location = new Point(276, 358);
+            txtTim.Location = new Point(433, 507);
             txtTim.Name = "txtTim";
             txtTim.Size = new Size(178, 26);
             txtTim.TabIndex = 23;
@@ -70,7 +70,7 @@
             // btnTim
             // 
             btnTim.Anchor = AnchorStyles.Bottom;
-            btnTim.Location = new Point(460, 350);
+            btnTim.Location = new Point(617, 499);
             btnTim.Name = "btnTim";
             btnTim.Size = new Size(86, 41);
             btnTim.TabIndex = 22;
@@ -81,7 +81,7 @@
             // btnLamMoi
             // 
             btnLamMoi.Anchor = AnchorStyles.Bottom;
-            btnLamMoi.Location = new Point(552, 397);
+            btnLamMoi.Location = new Point(709, 546);
             btnLamMoi.Name = "btnLamMoi";
             btnLamMoi.Size = new Size(86, 41);
             btnLamMoi.TabIndex = 21;
@@ -92,7 +92,7 @@
             // btnLuu
             // 
             btnLuu.Anchor = AnchorStyles.Bottom;
-            btnLuu.Location = new Point(460, 397);
+            btnLuu.Location = new Point(617, 546);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(86, 41);
             btnLuu.TabIndex = 20;
@@ -103,7 +103,7 @@
             // btnSua
             // 
             btnSua.Anchor = AnchorStyles.Bottom;
-            btnSua.Location = new Point(368, 397);
+            btnSua.Location = new Point(525, 546);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(86, 41);
             btnSua.TabIndex = 19;
@@ -114,7 +114,7 @@
             // btnXoa
             // 
             btnXoa.Anchor = AnchorStyles.Bottom;
-            btnXoa.Location = new Point(276, 397);
+            btnXoa.Location = new Point(433, 546);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(86, 41);
             btnXoa.TabIndex = 18;
@@ -125,7 +125,7 @@
             // btnThem
             // 
             btnThem.Anchor = AnchorStyles.Bottom;
-            btnThem.Location = new Point(184, 397);
+            btnThem.Location = new Point(341, 546);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(86, 41);
             btnThem.TabIndex = 17;
@@ -140,11 +140,11 @@
             dgvDS.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvDS.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDS.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDS.Location = new Point(12, 182);
+            dgvDS.Location = new Point(12, 250);
             dgvDS.Name = "dgvDS";
             dgvDS.ReadOnly = true;
             dgvDS.RowHeadersWidth = 47;
-            dgvDS.Size = new Size(776, 163);
+            dgvDS.Size = new Size(1091, 244);
             dgvDS.TabIndex = 16;
             dgvDS.Click += dgvDS_Click;
             // 
@@ -153,7 +153,7 @@
             lblGhiChu.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblGhiChu.AutoSize = true;
             lblGhiChu.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblGhiChu.Location = new Point(363, 82);
+            lblGhiChu.Location = new Point(635, 152);
             lblGhiChu.Name = "lblGhiChu";
             lblGhiChu.Size = new Size(69, 23);
             lblGhiChu.TabIndex = 29;
@@ -162,7 +162,7 @@
             // txtghiChu
             // 
             txtghiChu.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtghiChu.Location = new Point(434, 79);
+            txtghiChu.Location = new Point(706, 149);
             txtghiChu.Multiline = true;
             txtghiChu.Name = "txtghiChu";
             txtghiChu.Size = new Size(228, 55);
@@ -172,7 +172,7 @@
             // 
             lblTen.AutoSize = true;
             lblTen.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTen.Location = new Point(20, 12);
+            lblTen.Location = new Point(66, 79);
             lblTen.Name = "lblTen";
             lblTen.Size = new Size(80, 23);
             lblTen.TabIndex = 27;
@@ -180,7 +180,7 @@
             // 
             // txtTen
             // 
-            txtTen.Location = new Point(145, 12);
+            txtTen.Location = new Point(191, 79);
             txtTen.Name = "txtTen";
             txtTen.Size = new Size(183, 26);
             txtTen.TabIndex = 26;
@@ -189,7 +189,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(20, 76);
+            label1.Location = new Point(66, 143);
             label1.Name = "label1";
             label1.Size = new Size(114, 23);
             label1.TabIndex = 33;
@@ -197,7 +197,7 @@
             // 
             // txtgiaNhap
             // 
-            txtgiaNhap.Location = new Point(145, 76);
+            txtgiaNhap.Location = new Point(191, 143);
             txtgiaNhap.Name = "txtgiaNhap";
             txtgiaNhap.Size = new Size(183, 26);
             txtgiaNhap.TabIndex = 32;
@@ -206,7 +206,7 @@
             // 
             lblSoLuong.AutoSize = true;
             lblSoLuong.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSoLuong.Location = new Point(20, 44);
+            lblSoLuong.Location = new Point(66, 111);
             lblSoLuong.Name = "lblSoLuong";
             lblSoLuong.Size = new Size(78, 23);
             lblSoLuong.TabIndex = 31;
@@ -214,7 +214,7 @@
             // 
             // txtSL
             // 
-            txtSL.Location = new Point(145, 44);
+            txtSL.Location = new Point(191, 111);
             txtSL.Name = "txtSL";
             txtSL.Size = new Size(183, 26);
             txtSL.TabIndex = 30;
@@ -223,7 +223,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(20, 108);
+            label3.Location = new Point(66, 175);
             label3.Name = "label3";
             label3.Size = new Size(104, 23);
             label3.TabIndex = 35;
@@ -231,7 +231,7 @@
             // 
             // txtgiaBan
             // 
-            txtgiaBan.Location = new Point(145, 108);
+            txtgiaBan.Location = new Point(191, 175);
             txtgiaBan.Name = "txtgiaBan";
             txtgiaBan.Size = new Size(183, 26);
             txtgiaBan.TabIndex = 34;
@@ -239,7 +239,7 @@
             // picbox_anh
             // 
             picbox_anh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            picbox_anh.Location = new Point(673, 15);
+            picbox_anh.Location = new Point(945, 85);
             picbox_anh.Name = "picbox_anh";
             picbox_anh.Size = new Size(115, 148);
             picbox_anh.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -251,7 +251,7 @@
             lblHinh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblHinh.AutoSize = true;
             lblHinh.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblHinh.Location = new Point(363, 18);
+            lblHinh.Location = new Point(635, 88);
             lblHinh.Name = "lblHinh";
             lblHinh.Size = new Size(46, 23);
             lblHinh.TabIndex = 38;
@@ -260,7 +260,7 @@
             // txtHinh
             // 
             txtHinh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtHinh.Location = new Point(434, 15);
+            txtHinh.Location = new Point(706, 85);
             txtHinh.Multiline = true;
             txtHinh.Name = "txtHinh";
             txtHinh.Size = new Size(151, 58);
@@ -269,7 +269,7 @@
             // btnMoHinh
             // 
             btnMoHinh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnMoHinh.Location = new Point(591, 15);
+            btnMoHinh.Location = new Point(863, 85);
             btnMoHinh.Name = "btnMoHinh";
             btnMoHinh.Size = new Size(71, 58);
             btnMoHinh.TabIndex = 39;
@@ -281,7 +281,7 @@
             // 
             lblMaNV.AutoSize = true;
             lblMaNV.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblMaNV.Location = new Point(20, 140);
+            lblMaNV.Location = new Point(66, 207);
             lblMaNV.Name = "lblMaNV";
             lblMaNV.Size = new Size(63, 23);
             lblMaNV.TabIndex = 41;
@@ -289,7 +289,7 @@
             // 
             // txtMaNV
             // 
-            txtMaNV.Location = new Point(145, 140);
+            txtMaNV.Location = new Point(191, 207);
             txtMaNV.Name = "txtMaNV";
             txtMaNV.Size = new Size(183, 26);
             txtMaNV.TabIndex = 40;
@@ -298,7 +298,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1115, 599);
             ControlBox = false;
             Controls.Add(lblMaNV);
             Controls.Add(txtMaNV);
@@ -324,6 +324,7 @@
             Controls.Add(btnXoa);
             Controls.Add(btnThem);
             Controls.Add(dgvDS);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmSanPham";
             Text = "frmSanPham";
             WindowState = FormWindowState.Maximized;

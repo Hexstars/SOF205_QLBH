@@ -57,7 +57,7 @@
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(103, 25);
+            txtEmail.Location = new Point(170, 85);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(251, 26);
             txtEmail.TabIndex = 0;
@@ -66,7 +66,7 @@
             // 
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblEmail.Location = new Point(12, 25);
+            lblEmail.Location = new Point(79, 85);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(51, 23);
             lblEmail.TabIndex = 1;
@@ -77,7 +77,7 @@
             grpTT.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             grpTT.Controls.Add(rdoNHD);
             grpTT.Controls.Add(rdoHD);
-            grpTT.Location = new Point(467, 114);
+            grpTT.Location = new Point(758, 175);
             grpTT.Name = "grpTT";
             grpTT.Size = new Size(308, 60);
             grpTT.TabIndex = 2;
@@ -110,7 +110,7 @@
             // 
             grpVT.Controls.Add(rdoQT);
             grpVT.Controls.Add(rdoNV);
-            grpVT.Location = new Point(46, 114);
+            grpVT.Location = new Point(113, 174);
             grpVT.Name = "grpVT";
             grpVT.Size = new Size(308, 60);
             grpVT.TabIndex = 3;
@@ -143,7 +143,7 @@
             // 
             lblTen.AutoSize = true;
             lblTen.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTen.Location = new Point(12, 88);
+            lblTen.Location = new Point(79, 148);
             lblTen.Name = "lblTen";
             lblTen.Size = new Size(85, 23);
             lblTen.TabIndex = 5;
@@ -151,7 +151,7 @@
             // 
             // txtTen
             // 
-            txtTen.Location = new Point(103, 89);
+            txtTen.Location = new Point(170, 149);
             txtTen.Name = "txtTen";
             txtTen.Size = new Size(251, 26);
             txtTen.TabIndex = 4;
@@ -161,7 +161,7 @@
             lblDiaChi.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblDiaChi.AutoSize = true;
             lblDiaChi.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDiaChi.Location = new Point(476, 27);
+            lblDiaChi.Location = new Point(767, 88);
             lblDiaChi.Name = "lblDiaChi";
             lblDiaChi.Size = new Size(65, 23);
             lblDiaChi.TabIndex = 7;
@@ -170,7 +170,7 @@
             // txtdiaChi
             // 
             txtdiaChi.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtdiaChi.Location = new Point(547, 24);
+            txtdiaChi.Location = new Point(838, 85);
             txtdiaChi.Multiline = true;
             txtdiaChi.Name = "txtdiaChi";
             txtdiaChi.Size = new Size(228, 91);
@@ -183,18 +183,18 @@
             dgvDS.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvDS.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDS.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDS.Location = new Point(12, 189);
+            dgvDS.Location = new Point(12, 246);
             dgvDS.Name = "dgvDS";
             dgvDS.ReadOnly = true;
             dgvDS.RowHeadersWidth = 47;
-            dgvDS.Size = new Size(776, 151);
+            dgvDS.Size = new Size(1109, 287);
             dgvDS.TabIndex = 8;
             dgvDS.Click += dgvDS_Click;
             // 
             // btnThem
             // 
             btnThem.Anchor = AnchorStyles.Bottom;
-            btnThem.Location = new Point(191, 397);
+            btnThem.Location = new Point(357, 590);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(86, 41);
             btnThem.TabIndex = 9;
@@ -205,7 +205,7 @@
             // btnXoa
             // 
             btnXoa.Anchor = AnchorStyles.Bottom;
-            btnXoa.Location = new Point(283, 397);
+            btnXoa.Location = new Point(449, 590);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(86, 41);
             btnXoa.TabIndex = 10;
@@ -216,7 +216,7 @@
             // btnSua
             // 
             btnSua.Anchor = AnchorStyles.Bottom;
-            btnSua.Location = new Point(375, 397);
+            btnSua.Location = new Point(541, 590);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(86, 41);
             btnSua.TabIndex = 11;
@@ -227,7 +227,7 @@
             // btnLuu
             // 
             btnLuu.Anchor = AnchorStyles.Bottom;
-            btnLuu.Location = new Point(467, 397);
+            btnLuu.Location = new Point(633, 590);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(86, 41);
             btnLuu.TabIndex = 12;
@@ -238,7 +238,7 @@
             // btnLamMoi
             // 
             btnLamMoi.Anchor = AnchorStyles.Bottom;
-            btnLamMoi.Location = new Point(559, 397);
+            btnLamMoi.Location = new Point(725, 590);
             btnLamMoi.Name = "btnLamMoi";
             btnLamMoi.Size = new Size(86, 41);
             btnLamMoi.TabIndex = 13;
@@ -249,7 +249,7 @@
             // btnTim
             // 
             btnTim.Anchor = AnchorStyles.Bottom;
-            btnTim.Location = new Point(467, 350);
+            btnTim.Location = new Point(633, 543);
             btnTim.Name = "btnTim";
             btnTim.Size = new Size(86, 41);
             btnTim.TabIndex = 14;
@@ -261,7 +261,7 @@
             // 
             txtTim.Anchor = AnchorStyles.Bottom;
             txtTim.BackColor = Color.LightGray;
-            txtTim.Location = new Point(283, 358);
+            txtTim.Location = new Point(449, 551);
             txtTim.Name = "txtTim";
             txtTim.Size = new Size(178, 26);
             txtTim.TabIndex = 15;
@@ -272,7 +272,7 @@
             // 
             lblMK.AutoSize = true;
             lblMK.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblMK.Location = new Point(12, 57);
+            lblMK.Location = new Point(79, 117);
             lblMK.Name = "lblMK";
             lblMK.Size = new Size(82, 23);
             lblMK.TabIndex = 17;
@@ -280,7 +280,7 @@
             // 
             // txtMK
             // 
-            txtMK.Location = new Point(103, 57);
+            txtMK.Location = new Point(170, 117);
             txtMK.Name = "txtMK";
             txtMK.Size = new Size(251, 26);
             txtMK.TabIndex = 16;
@@ -289,7 +289,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1133, 643);
             ControlBox = false;
             Controls.Add(lblMK);
             Controls.Add(txtMK);
