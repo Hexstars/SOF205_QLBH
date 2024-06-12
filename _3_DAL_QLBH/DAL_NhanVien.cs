@@ -108,6 +108,24 @@ namespace _3_DAL_QLBH
                 conn.Close();
             }
         }
+        public DataTable layMaNhanVien()
+        {
+            try
+            {
+                //Kết nối 
+                conn.Open();
+                string sql = "select manv from nhanvien";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+
+                DataTable dtNhanVien = new DataTable();
+                dtNhanVien.Load(cmd.ExecuteReader());
+                return dtNhanVien;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
         public DataTable getNhanVien()
         {
             try

@@ -14,27 +14,6 @@ namespace _2_BUS_QLBH
     public class BUS_NhanVien
     {
         DAL_NhanVien dalNV = new DAL_NhanVien();
-
-        public bool NhanVienDangNhap(DTO_NhanVien nhanVien)
-        {
-            return dalNV.NhanVienDangNhap(nhanVien);
-        }
-        public bool NhanVienQuenMK(string email)
-        {
-            return dalNV.NhanVienQuenMK(email);
-        }
-        public bool CapNhatMK(string email, string matkhau)
-        {
-            return dalNV.UpdateMK(email, matkhau);
-        }
-        public DataTable VaiTroNV(string email) 
-        {
-            return dalNV.VaiTroNV(email);
-        }
-        public DataTable LayMK(string email) 
-        {
-            return dalNV.LayMK(email);
-        }
         //xử lí md5
         public string encryption(string password)
         {
@@ -50,6 +29,30 @@ namespace _2_BUS_QLBH
                 encryptdata.Append(encrypt[i].ToString());
             }
             return encryptdata.ToString();
+        }
+        public bool NhanVienDangNhap(DTO_NhanVien nhanVien)
+        {
+            return dalNV.NhanVienDangNhap(nhanVien);
+        }
+        public bool NhanVienQuenMK(string email)
+        {
+            return dalNV.NhanVienQuenMK(email);
+        }
+        public bool CapNhatMK(string email, string matkhau)
+        {
+            return dalNV.UpdateMK(email, matkhau);
+        }
+        public DataTable VaiTroNV(string email)
+        {
+            return dalNV.VaiTroNV(email);
+        }
+        public DataTable LayMK(string email)
+        {
+            return dalNV.LayMK(email);
+        }
+        public DataTable LayMaNV()
+        {
+            return dalNV.layMaNhanVien();
         }
         public DataTable GetNhanVien()
         {
