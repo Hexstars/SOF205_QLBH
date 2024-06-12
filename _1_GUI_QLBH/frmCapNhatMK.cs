@@ -97,6 +97,12 @@ namespace _1_GUI_QLBH
                 txtMKmoi1.Focus();
                 return;
             }
+            else if (txtMKmoi1.Text.Trim().Length < 7)
+            {
+                MessageBox.Show("Mật khẩu mới phải dài hơn 7 kí tự", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMKmoi1.Focus();
+                return;
+            }
             else if (txtMKmoi2.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Hãy nhập lại mật khẩu mới", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -126,6 +132,8 @@ namespace _1_GUI_QLBH
                     if (busNhanVien.CapNhatMK(EmailNV, MatKhauMoi))//cap nhat mat khau thanh cong
                     {
                         MessageBox.Show("Cập nhật mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        maXacNhan = null;
 
                         txtEmail.Clear();
                         txtMaXN.Clear();
