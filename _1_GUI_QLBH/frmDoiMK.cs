@@ -75,10 +75,5 @@ namespace _1_GUI_QLBH
                 }
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }

@@ -37,7 +37,7 @@
             txtMKmoi1 = new TextBox();
             txtMKmoi2 = new TextBox();
             btnCapNhat = new Button();
-            button1 = new Button();
+            btnThoat = new Button();
             btnGuiMa = new Button();
             lblDN = new Label();
             SuspendLayout();
@@ -134,18 +134,19 @@
             btnCapNhat.UseVisualStyleBackColor = false;
             btnCapNhat.Click += btnCapNhat_Click;
             // 
-            // button1
+            // btnThoat
             // 
-            button1.Anchor = AnchorStyles.Top;
-            button1.BackColor = Color.LimeGreen;
-            button1.Font = new Font("Segoe UI", 18.3272724F);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(438, 454);
-            button1.Name = "button1";
-            button1.Size = new Size(240, 55);
-            button1.TabIndex = 9;
-            button1.Text = "Thoát";
-            button1.UseVisualStyleBackColor = false;
+            btnThoat.Anchor = AnchorStyles.Top;
+            btnThoat.BackColor = Color.LimeGreen;
+            btnThoat.Font = new Font("Segoe UI", 18.3272724F);
+            btnThoat.ForeColor = Color.White;
+            btnThoat.Location = new Point(438, 454);
+            btnThoat.Name = "btnThoat";
+            btnThoat.Size = new Size(240, 55);
+            btnThoat.TabIndex = 9;
+            btnThoat.Text = "Thoát";
+            btnThoat.UseVisualStyleBackColor = false;
+            btnThoat.Click += btnThoat_Click;
             // 
             // btnGuiMa
             // 
@@ -180,7 +181,7 @@
             ControlBox = false;
             Controls.Add(lblDN);
             Controls.Add(btnGuiMa);
-            Controls.Add(button1);
+            Controls.Add(btnThoat);
             Controls.Add(btnCapNhat);
             Controls.Add(txtMKmoi2);
             Controls.Add(txtMKmoi1);
@@ -210,7 +211,7 @@
         private TextBox txtMKmoi1;
         private TextBox txtMKmoi2;
         private Button btnCapNhat;
-        private Button button1;
+        private Button btnThoat;
         private Button btnGuiMa;
         private Label lblDN;
     }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
             btnCapNhat = new Button();
             txtMKmoi2 = new TextBox();
             txtMKmoi1 = new TextBox();
@@ -40,20 +39,6 @@
             lblEmail = new Label();
             lblDN = new Label();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Top;
-            button1.BackColor = Color.LimeGreen;
-            button1.Font = new Font("Segoe UI", 18.3272724F);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(470, 460);
-            button1.Name = "button1";
-            button1.Size = new Size(240, 55);
-            button1.TabIndex = 19;
-            button1.Text = "Thoát";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
             // 
             // btnCapNhat
             // 
@@ -167,7 +152,6 @@
             ClientSize = new Size(1146, 696);
             ControlBox = false;
             Controls.Add(lblDN);
-            Controls.Add(button1);
             Controls.Add(btnCapNhat);
             Controls.Add(txtMKmoi2);
             Controls.Add(txtMKmoi1);
@@ -187,8 +171,6 @@
         }
 
         #endregion
-
-        private Button button1;
         private Button btnCapNhat;
         private TextBox txtMKmoi2;
         private TextBox txtMKmoi1;
