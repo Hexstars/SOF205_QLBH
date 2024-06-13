@@ -46,7 +46,6 @@
             lblDienThoai = new Label();
             txtDienThoai = new TextBox();
             lblMaNV = new Label();
-            txtMaNV = new TextBox();
             cboMaNV = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvDS).BeginInit();
             grpGT.SuspendLayout();
@@ -56,7 +55,7 @@
             // 
             txtTim.Anchor = AnchorStyles.Bottom;
             txtTim.BackColor = Color.LightGray;
-            txtTim.Location = new Point(449, 554);
+            txtTim.Location = new Point(539, 647);
             txtTim.Name = "txtTim";
             txtTim.Size = new Size(178, 26);
             txtTim.TabIndex = 23;
@@ -66,7 +65,7 @@
             // btnTim
             // 
             btnTim.Anchor = AnchorStyles.Bottom;
-            btnTim.Location = new Point(633, 546);
+            btnTim.Location = new Point(723, 639);
             btnTim.Name = "btnTim";
             btnTim.Size = new Size(86, 41);
             btnTim.TabIndex = 22;
@@ -77,7 +76,7 @@
             // btnLamMoi
             // 
             btnLamMoi.Anchor = AnchorStyles.Bottom;
-            btnLamMoi.Location = new Point(725, 593);
+            btnLamMoi.Location = new Point(815, 686);
             btnLamMoi.Name = "btnLamMoi";
             btnLamMoi.Size = new Size(86, 41);
             btnLamMoi.TabIndex = 21;
@@ -88,7 +87,7 @@
             // btnLuu
             // 
             btnLuu.Anchor = AnchorStyles.Bottom;
-            btnLuu.Location = new Point(633, 593);
+            btnLuu.Location = new Point(723, 686);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(86, 41);
             btnLuu.TabIndex = 20;
@@ -99,7 +98,7 @@
             // btnSua
             // 
             btnSua.Anchor = AnchorStyles.Bottom;
-            btnSua.Location = new Point(541, 593);
+            btnSua.Location = new Point(631, 686);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(86, 41);
             btnSua.TabIndex = 19;
@@ -110,7 +109,7 @@
             // btnXoa
             // 
             btnXoa.Anchor = AnchorStyles.Bottom;
-            btnXoa.Location = new Point(449, 593);
+            btnXoa.Location = new Point(539, 686);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(86, 41);
             btnXoa.TabIndex = 18;
@@ -121,7 +120,7 @@
             // btnThem
             // 
             btnThem.Anchor = AnchorStyles.Bottom;
-            btnThem.Location = new Point(357, 593);
+            btnThem.Location = new Point(447, 686);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(86, 41);
             btnThem.TabIndex = 17;
@@ -140,7 +139,7 @@
             dgvDS.Name = "dgvDS";
             dgvDS.ReadOnly = true;
             dgvDS.RowHeadersWidth = 47;
-            dgvDS.Size = new Size(1109, 319);
+            dgvDS.Size = new Size(1290, 396);
             dgvDS.TabIndex = 16;
             dgvDS.Click += dgvDS_Click;
             // 
@@ -149,7 +148,7 @@
             lblDiaChi.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblDiaChi.AutoSize = true;
             lblDiaChi.Font = new Font("Segoe UI", 15.7090912F);
-            lblDiaChi.Location = new Point(680, 45);
+            lblDiaChi.Location = new Point(861, 45);
             lblDiaChi.Name = "lblDiaChi";
             lblDiaChi.Size = new Size(87, 32);
             lblDiaChi.TabIndex = 30;
@@ -161,7 +160,7 @@
             grpGT.Controls.Add(rdoNu);
             grpGT.Controls.Add(rdoNam);
             grpGT.Font = new Font("Segoe UI", 15.7090912F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            grpGT.Location = new Point(680, 107);
+            grpGT.Location = new Point(861, 127);
             grpGT.Name = "grpGT";
             grpGT.Size = new Size(361, 62);
             grpGT.TabIndex = 26;
@@ -194,10 +193,10 @@
             // 
             txtdiaChi.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtdiaChi.Font = new Font("Segoe UI", 13.7454548F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtdiaChi.Location = new Point(795, 42);
+            txtdiaChi.Location = new Point(976, 42);
             txtdiaChi.Multiline = true;
             txtdiaChi.Name = "txtdiaChi";
-            txtdiaChi.Size = new Size(228, 42);
+            txtdiaChi.Size = new Size(246, 79);
             txtdiaChi.TabIndex = 29;
             // 
             // lblTen
@@ -246,19 +245,12 @@
             lblMaNV.TabIndex = 32;
             lblMaNV.Text = "Mã NV";
             // 
-            // txtMaNV
-            // 
-            txtMaNV.Font = new Font("Segoe UI", 13.7454548F);
-            txtMaNV.Location = new Point(214, 134);
-            txtMaNV.Name = "txtMaNV";
-            txtMaNV.Size = new Size(126, 35);
-            txtMaNV.TabIndex = 31;
-            // 
             // cboMaNV
             // 
+            cboMaNV.DropDownStyle = ComboBoxStyle.DropDownList;
             cboMaNV.Font = new Font("Segoe UI", 13.7454548F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cboMaNV.FormattingEnabled = true;
-            cboMaNV.Location = new Point(357, 134);
+            cboMaNV.Location = new Point(214, 134);
             cboMaNV.Name = "cboMaNV";
             cboMaNV.Size = new Size(139, 38);
             cboMaNV.TabIndex = 33;
@@ -267,11 +259,10 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1133, 643);
+            ClientSize = new Size(1314, 756);
             ControlBox = false;
             Controls.Add(cboMaNV);
             Controls.Add(lblMaNV);
-            Controls.Add(txtMaNV);
             Controls.Add(lblDiaChi);
             Controls.Add(grpGT);
             Controls.Add(txtdiaChi);
@@ -319,7 +310,6 @@
         private Label lblDienThoai;
         private TextBox txtDienThoai;
         private Label lblMaNV;
-        private TextBox txtMaNV;
         private ComboBox cboMaNV;
     }
 }

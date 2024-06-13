@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace _1_GUI_QLBH
 {
@@ -32,15 +33,16 @@ namespace _1_GUI_QLBH
         {
             txtTim.Text = "Nhập tên khách hàng";
             txtTim.BackColor = Color.LightGray;
+            LoadCboMaNV();
             txtDienThoai.Clear();
             txtTen.Clear();
             txtdiaChi.Clear();
-            txtMaNV.Clear();
+            cboMaNV.Text = null;
 
             txtDienThoai.Enabled = false;
             txtTen.Enabled = false;
             txtdiaChi.Enabled = false;
-            txtMaNV.Enabled = false;
+            cboMaNV.Enabled = false;
 
             grpGT.Enabled = false;
 
@@ -55,12 +57,12 @@ namespace _1_GUI_QLBH
             txtDienThoai.Clear();
             txtTen.Clear();
             txtdiaChi.Clear();
-            txtMaNV.Clear();
+            cboMaNV.Text= null;
 
             txtDienThoai.Enabled = true;
             txtTen.Enabled = true;
             txtdiaChi.Enabled = true;
-            txtMaNV.Enabled = true;
+            cboMaNV.Enabled = true;
 
             grpGT.Enabled = true;
 
@@ -76,15 +78,22 @@ namespace _1_GUI_QLBH
             Default();
             LoadGridView_KhachHang();
         }
-
+        BUS_NhanVien busNhanVien = new BUS_NhanVien();
+        private void LoadCboMaNV()
+        {
+            DataTable dtMaNV = busNhanVien.LayMaNV();
+            cboMaNV.DataSource = dtMaNV;
+            cboMaNV.DisplayMember = "manv";
+            cboMaNV.ValueMember = "manv";
+        }
         private void dgvDS_Click(object sender, EventArgs e)
         {
-            if (dgvDS.Rows.Count > 1)
+            if (dgvDS.Rows.Count > 0)
             {
                 btnLuu.Enabled = false;
                 txtTen.Enabled = true;
                 txtdiaChi.Enabled = true;
-                txtMaNV.Enabled = true;
+                cboMaNV.Enabled = true;
 
                 grpGT.Enabled = true;
 
@@ -94,7 +103,7 @@ namespace _1_GUI_QLBH
                 txtDienThoai.Text = dgvDS.CurrentRow.Cells["dienthoai"].Value.ToString();
                 txtTen.Text = dgvDS.CurrentRow.Cells["tenkhach"].Value.ToString();
                 txtdiaChi.Text = dgvDS.CurrentRow.Cells["DiaChi"].Value.ToString();
-                txtMaNV.Text = dgvDS.CurrentRow.Cells["MaNV"].Value.ToString();
+                cboMaNV.SelectedValue = dgvDS.CurrentRow.Cells["MaNV"].Value.ToString();
                 if (dgvDS.CurrentRow.Cells["phai"].Value.ToString() == rdoNam.Text)
                 {
                     rdoNam.Checked = true;
@@ -124,6 +133,12 @@ namespace _1_GUI_QLBH
                 txtTen.Focus();
                 return;
             }
+            else if (cboMaNV.SelectedValue == null)
+            {
+                MessageBox.Show("Vui lòng chọn mã nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cboMaNV.Focus();
+                return;
+            }
             else if (rdoNam.Checked == false && rdoNu.Checked == false)
             {
                 MessageBox.Show("Vui lòng chọn giới tính", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -148,7 +163,7 @@ namespace _1_GUI_QLBH
                 }
                 else
                 {
-                    DTO_KhachHang kh = new DTO_KhachHang(txtDienThoai.Text, txtTen.Text, txtdiaChi.Text, phai, txtMaNV.Text);
+                    DTO_KhachHang kh = new DTO_KhachHang(txtDienThoai.Text, txtTen.Text, txtdiaChi.Text, phai, cboMaNV.SelectedValue.ToString());
                     if (busKH.InsertKH(kh))
                     {
                         Default();
@@ -202,10 +217,10 @@ namespace _1_GUI_QLBH
                 txtTen.Focus();
                 return;
             }
-            else if (txtMaNV.Text.Trim().Length == 0)
+            else if (cboMaNV.SelectedValue == null)
             {
-                MessageBox.Show("Vui lòng nhập mã NV", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtMaNV.Focus();
+                MessageBox.Show("Vui lòng chọn mã nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cboMaNV.Focus();
                 return;
             }
             else if (txtdiaChi.Text.Trim().Length == 0)
@@ -238,7 +253,7 @@ namespace _1_GUI_QLBH
                 }
                 else
                 {
-                    DTO_KhachHang kh = new DTO_KhachHang(txtDienThoai.Text, txtTen.Text, txtdiaChi.Text, phai, txtMaNV.Text);
+                    DTO_KhachHang kh = new DTO_KhachHang(txtDienThoai.Text, txtTen.Text, txtdiaChi.Text, phai, cboMaNV.SelectedValue.ToString());
                     if (MessageBox.Show("Bạn có chắc muốn chỉnh sửa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         if (busKH.UpdateKH(kh))
