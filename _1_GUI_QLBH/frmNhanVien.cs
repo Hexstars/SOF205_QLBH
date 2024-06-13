@@ -142,19 +142,29 @@ namespace _1_GUI_QLBH
             }
             else
             {
-                // Tạo 1 DTO
-                string matKhau = busNhanVien.encryption(txtMK.Text);
-                DTO_NhanVien nv = new DTO_NhanVien(txtEmail.Text, txtTen.Text, txtdiaChi.Text, role, tinhtrang, matKhau);
-                if (busNhanVien.InsertNV(nv))
+                if (busNhanVien.KiemTraEmail(txtEmail.Text))
                 {
-                    MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Default();
-                    LoadGridView_NhanVien();
+                    MessageBox.Show("Email đã tồn tại trong hệ thống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtEmail.Focus();
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("Thêm ko thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Tạo 1 DTO
+                    string matKhau = busNhanVien.encryption(txtMK.Text);
+                    DTO_NhanVien nv = new DTO_NhanVien(txtEmail.Text, txtTen.Text, txtdiaChi.Text, role, tinhtrang, matKhau);
+                    if (busNhanVien.InsertNV(nv))
+                    {
+                        MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Default();
+                        LoadGridView_NhanVien();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm thất thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
+
             }
         }
 
@@ -253,36 +263,45 @@ namespace _1_GUI_QLBH
             }
             else
             {
-                int role = 0;
-                if (rdoQT.Checked)
+                if (busNhanVien.KiemTraEmail(txtEmail.Text))
                 {
-                    role = 1;
-                }
-                int tinhtrang = 0;
-                if (rdoHD.Checked)
-                {
-                    tinhtrang = 1;
-                }
-                //Tạo DTO
-                string maNV = dgvDS.CurrentRow.Cells["MaNV"].Value.ToString();
-                string matKhau = busNhanVien.encryption(txtMK.Text);
-                DTO_NhanVien nv = new DTO_NhanVien(txtEmail.Text, txtTen.Text, txtdiaChi.Text, role, tinhtrang, matKhau);
-                if (MessageBox.Show("Bạn có chắc muốn chỉnh sửa", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    if (busNhanVien.UpdateNV(nv, maNV))
-                    {
-                        Default();
-                        LoadGridView_NhanVien();
-                        MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Sửa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    MessageBox.Show("Email đã tồn tại trong hệ thống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtEmail.Focus();
+                    return;
                 }
                 else
                 {
-                    Default();
+                    int role = 0;
+                    if (rdoQT.Checked)
+                    {
+                        role = 1;
+                    }
+                    int tinhtrang = 0;
+                    if (rdoHD.Checked)
+                    {
+                        tinhtrang = 1;
+                    }
+                    //Tạo DTO
+                    string maNV = dgvDS.CurrentRow.Cells["MaNV"].Value.ToString();
+                    string matKhau = busNhanVien.encryption(txtMK.Text);
+                    DTO_NhanVien nv = new DTO_NhanVien(txtEmail.Text, txtTen.Text, txtdiaChi.Text, role, tinhtrang, matKhau);
+                    if (MessageBox.Show("Bạn có chắc muốn chỉnh sửa", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        if (busNhanVien.UpdateNV(nv, maNV))
+                        {
+                            Default();
+                            LoadGridView_NhanVien();
+                            MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sửa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else
+                    {
+                        Default();
+                    }
                 }
             }
         }

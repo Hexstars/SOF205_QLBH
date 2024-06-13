@@ -54,6 +54,10 @@ namespace _2_BUS_QLBH
         {
             return dalNV.layMaNhanVien();
         }
+        public bool KiemTraEmail(string email) 
+        {
+            return dalNV.kiemTraEmail(email);
+        }
         public DataTable GetNhanVien()
         {
             return dalNV.getNhanVien();

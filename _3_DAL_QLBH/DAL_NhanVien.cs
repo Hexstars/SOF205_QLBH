@@ -126,6 +126,29 @@ namespace _3_DAL_QLBH
                 conn.Close();
             }
         }
+        public bool kiemTraEmail(string email)
+        {
+            try
+            {
+                conn.Open();
+
+                // Sử dụng truy vấn với tham số để tránh SQL injection
+                string sql = "SELECT COUNT(email) FROM nhanvien WHERE email = @Email";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@Email", email);
+
+                int count = (int)cmd.ExecuteScalar();
+                if (count == 1)
+                {
+                    return true;
+                }
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return false;
+        }
         public DataTable getNhanVien()
         {
             try
