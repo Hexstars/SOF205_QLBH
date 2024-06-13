@@ -29,6 +29,14 @@ namespace _1_GUI_QLBH
             Default();
             LoadGridView_SanPham();
         }
+        BUS_NhanVien busNhanVien = new BUS_NhanVien();
+        private void LoadCboMaNV()
+        {
+            DataTable dtMaNV = busNhanVien.LayMaNV();
+            cboMaNV.DataSource = dtMaNV;
+            cboMaNV.DisplayMember = "manv";
+            cboMaNV.ValueMember = "manv";
+        }
         private void LoadGridView_SanPham()
         {
             dgvDS.DataSource = busSanPham.GetSP();
@@ -50,7 +58,10 @@ namespace _1_GUI_QLBH
             txtgiaBan.Clear();
             txtHinh.Clear();
             txtghiChu.Clear();
-            txtMaNV.Clear();
+
+            LoadCboMaNV();
+
+            cboMaNV.Text = null;
             picbox_anh.Image = null;
 
             btnMoHinh.Enabled = false;
@@ -60,7 +71,7 @@ namespace _1_GUI_QLBH
             txtgiaBan.Enabled = false;
             txtHinh.Enabled = false;
             txtghiChu.Enabled = false;
-            txtMaNV.Enabled = false;
+            cboMaNV.Enabled = false;
 
             btnThem.Enabled = true;
             btnXoa.Enabled = false;
@@ -81,32 +92,10 @@ namespace _1_GUI_QLBH
                 fileName = Path.GetFileName(ofd.FileName); // Tên ảnh
 
                 string saveDirectory = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
-                /*Path.Combine(Application.StartupPath, "Images");*/
-
-                //// Đảm bảo thư mục tồn tại
-                //if (!Directory.Exists(saveDirectory))
-                //{
-                //    Directory.CreateDirectory(saveDirectory);
-                //}
 
                 fileSavePath = saveDirectory + "\\Images\\" + fileName; //combine with file name
                 /*Path.Combine(saveDirectory, fileName);*/ // Tạo đường dẫn để lưu file vào thư mục của project
-                txtHinh.Text = fileAddress;//"\\Images\\" + fileName;
-                //try
-                //{
-                //    // Lưu vào thư mục trong project
-                //    File.Copy(fileAddress, fileSavePath, true);
-
-                //    // Hiển thị ảnh
-                //    picbox_anh.Image = Image.FromFile(fileSavePath);
-
-                //    // Hiển thị vị trí ảnh (trong project)
-                //    txtHinh.Text = Path.Combine("Images", fileName);
-                //}
-                //catch (Exception ex)
-                //{
-                //    MessageBox.Show("Ảnh lỗi: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //}
+                txtHinh.Text = fileAddress;
             }
         }
 
@@ -142,88 +131,66 @@ namespace _1_GUI_QLBH
                 txtgiaBan.Focus();
                 return;
             }
+            else if (cboMaNV.SelectedValue == null)
+            {
+                MessageBox.Show("Vui lòng chọn mã nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cboMaNV.Focus();
+                return;
+            }
             else if (txtHinh.Text.Trim().Length == 0) // phải nhập hình
             {
                 MessageBox.Show("Vui lòng chọn hình", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtHinh.Focus();
                 return;
             }
+            else if (txtghiChu.Text.Trim().Length == 0) // phải nhập hình
+            {
+                MessageBox.Show("Vui lòng nhập ghi chú", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtghiChu.Focus();
+                return;
+            }
             else
             {
-                string relativePath = "\\Images\\" + fileName;
+                // Đường dẫn thư mục gốc của dự án
+                string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."));
+                string saveDirectory = Path.Combine(projectDirectory, "Images");
 
-                string startupPath = Application.StartupPath;
-                string imagesPath = Path.Combine(startupPath, "Images");
-
-                if (!Directory.Exists(imagesPath))
+                // Tạo thư mục nếu chưa có
+                if (!Directory.Exists(saveDirectory))
                 {
-                    Directory.CreateDirectory(imagesPath);
+                    Directory.CreateDirectory(saveDirectory);
                 }
 
-                fileName = Path.GetFileName(txtHinh.Text);
-                string absolutePath = Path.Combine(imagesPath, fileName);
+                // File information
+                string fileAddress = txtHinh.Text; // Assuming txtHinh contains the full path to the selected image
+                string fileName = Path.GetFileName(fileAddress);
+                string fileSavePath = Path.Combine(saveDirectory, fileName);
 
-                File.Copy(txtHinh.Text, absolutePath, true);
-
-                DTO_SanPham sp = new DTO_SanPham(txtTen.Text, int.Parse(txtSL.Text), float.Parse(txtgiaNhap.Text), float.Parse(txtgiaBan.Text), "\\Images\\" + fileName, txtghiChu.Text, txtMaNV.Text);
-
-                if (busSanPham.InsertSP(sp))
+                try
                 {
-                    Default();
-                    LoadGridView_SanPham();
-                    //string directoryPath = Path.GetDirectoryName(fileSavePath);
-                    //if (!Directory.Exists(directoryPath))
-                    //{
-                    //    Directory.CreateDirectory(directoryPath);
-                    //}
-                    //File.Copy(fileAddress, fileSavePath, true);
-                    MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Copy the image to the specified directory
+                    File.Copy(fileAddress, fileSavePath, true); // Copy and overwrite if exists
+
+                    // Update txtHinh to point to the new location
+                    txtHinh.Text = fileSavePath;
+
+                    DTO_SanPham sp = new DTO_SanPham(txtTen.Text, int.Parse(txtSL.Text), float.Parse(txtgiaNhap.Text), float.Parse(txtgiaBan.Text), txtHinh.Text, txtghiChu.Text, cboMaNV.SelectedValue.ToString());
+
+                    if (busSanPham.InsertSP(sp))
+                    {
+                        Default();
+                        LoadGridView_SanPham();
+                        MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Thêm thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-                //// Directory to save images
-                //string saveDirectory = @"D:\FPT_Polytechnic\SOF205_SD19312_DuAnMau\QLBH\_1_GUI_QLBH\Images";
-
-                //// Ensure the directory exists
-                //if (!Directory.Exists(saveDirectory))
-                //{
-                //    Directory.CreateDirectory(saveDirectory);
-                //}
-
-                //// File information
-                //string fileAddress = txtHinh.Text; // Assuming txtHinh contains the full path to the selected image
-                //string fileName = Path.GetFileName(fileAddress);
-                //string fileSavePath = Path.Combine(saveDirectory, fileName);
-
-                // Copy the image to the specified directory
-                //try
-                //{
-                //    File.Copy(fileAddress, Path.Combine(@"D:\FPT_Polytechnic\SOF205_SD19312_DuAnMau\QLBH\_1_GUI_QLBH\Images", Path.GetFileName(fileAddress)), true); // Copy and overwrite if exists
-
-                //    // Update txtHinh to point to the new location
-                //    txtHinh.Text = fileSavePath;
-
-                //    int maHang = int.Parse(dgvDS.CurrentRow.Cells["mahang"].Value.ToString());
-                //    DTO_SanPham sp = new DTO_SanPham(maHang, txtTen.Text, int.Parse(txtSL.Text), float.Parse(txtgiaNhap.Text), float.Parse(txtgiaBan.Text), txtHinh.Text, txtghiChu.Text, txtMaNV.Text);
-
-                //    if (busSanPham.InsertSP(sp))
-                //    {
-                //        MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //        Default();
-                //        LoadGridView_SanPham();
-                //    }
-                //    else
-                //    {
-                //        MessageBox.Show("Thêm thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //    }
-                //}
-                //catch (Exception ex)
-                //{
-                //    MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //}
             }
         }
 
@@ -241,7 +208,7 @@ namespace _1_GUI_QLBH
                 txtgiaBan.Enabled = true;
                 txtHinh.Enabled = true;
                 txtghiChu.Enabled = true;
-                txtMaNV.Enabled = true;
+                cboMaNV.Enabled = true;
                 btnMoHinh.Enabled = true;
 
                 btnXoa.Enabled = true;
@@ -252,7 +219,7 @@ namespace _1_GUI_QLBH
                 txtgiaNhap.Text = dgvDS.CurrentRow.Cells["dongianhap"].Value.ToString();
                 txtgiaBan.Text = dgvDS.CurrentRow.Cells["dongiaban"].Value.ToString();
                 txtghiChu.Text = dgvDS.CurrentRow.Cells["ghichu"].Value.ToString();
-                txtMaNV.Text = dgvDS.CurrentRow.Cells["manv"].Value.ToString();
+                cboMaNV.SelectedValue = dgvDS.CurrentRow.Cells["manv"].Value.ToString();
 
                 string relativePath = dgvDS.CurrentRow.Cells["hinhanh"].Value.ToString();
                 string imagePath = Path.Combine(saveDirectory, relativePath.TrimStart('\\')); // Chuyển đổi thành đường dẫn tuyệt đối
@@ -268,25 +235,6 @@ namespace _1_GUI_QLBH
                     picbox_anh.Image = null;
                 }
             }
-            //// Get the relative path of the image from the data grid
-            //string relativeImagePath = dgvDS.CurrentRow.Cells["hinhanh"].Value.ToString();
-
-                //// Combine base directory with relative path to get full path
-                //string fullImagePath = Path.Combine(baseDirectory, relativeImagePath);
-
-                //// Load and display the image in the PictureBox
-                //if (File.Exists(fullImagePath))
-                //{
-                //    picbox_anh.Image = Image.FromFile(fullImagePath);
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Image not found: " + fullImagePath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //}
-
-                //    txtghiChu.Text = dgvDS.CurrentRow.Cells["ghichu"].Value.ToString();
-                //    txtMaNV.Text = dgvDS.CurrentRow.Cells["manv"].Value.ToString();
-                //}
             else
             {
                 MessageBox.Show("Bảng trống", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -299,35 +247,35 @@ namespace _1_GUI_QLBH
         {
             int soLuong;
 
-            bool isInt = int.TryParse(txtSL.Text.Trim().ToString(), out soLuong);//ép kiểu để kiểm tra số hay chữ
+            bool isInt = int.TryParse(txtSL.Text.Trim(), out soLuong); // Ép kiểu để kiểm tra số hay chữ
 
             float donGiaNhap;
 
-            bool isFloatNhap = float.TryParse(txtgiaNhap.Text.Trim().ToString(), out donGiaNhap);
+            bool isFloatNhap = float.TryParse(txtgiaNhap.Text.Trim(), out donGiaNhap);
 
             float donGiaBan;
 
-            bool isFloatBan = float.TryParse(txtgiaBan.Text.Trim().ToString(), out donGiaBan);
+            bool isFloatBan = float.TryParse(txtgiaBan.Text.Trim(), out donGiaBan);
 
-            if (!isInt || int.Parse(txtSL.Text) < 0) //kiểm số lượng
+            if (!isInt || int.Parse(txtSL.Text) < 0) // Kiểm tra số lượng
             {
-                MessageBox.Show("Vui lòng số lượng hợp lệ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng nhập số lượng hợp lệ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtSL.Focus();
                 return;
             }
-            else if (!isFloatNhap || float.Parse(txtgiaNhap.Text) < 0) //kiểm giá nhập
+            else if (!isFloatNhap || float.Parse(txtgiaNhap.Text) < 0) // Kiểm tra giá nhập
             {
-                MessageBox.Show("Vui lòng giá nhập hợp lệ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng nhập giá nhập hợp lệ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtgiaNhap.Focus();
                 return;
             }
-            else if (!isFloatBan || float.Parse(txtgiaBan.Text) < 0) //kiểm giá nhập
+            else if (!isFloatBan || float.Parse(txtgiaBan.Text) < 0) // Kiểm tra giá bán
             {
-                MessageBox.Show("Vui lòng giá bán hợp lệ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng nhập giá bán hợp lệ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtgiaBan.Focus();
                 return;
             }
-            else if (txtHinh.Text.Trim().Length == 0) // phải nhập hình
+            else if (txtHinh.Text.Trim().Length == 0) // Phải nhập hình
             {
                 MessageBox.Show("Vui lòng chọn hình", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtHinh.Focus();
@@ -337,36 +285,46 @@ namespace _1_GUI_QLBH
             {
                 if (DialogResult.Yes == MessageBox.Show("Chắc chắn sửa?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 {
+                    // Đường dẫn thư mục gốc của dự án
+                    string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."));
+                    string saveDirectory = Path.Combine(projectDirectory, "Images");
+
+                    // Đảm bảo thư mục tồn tại
+                    if (!Directory.Exists(saveDirectory))
+                    {
+                        Directory.CreateDirectory(saveDirectory);
+                    }
+
+                    // Thông tin file
+                    string fileAddress = txtHinh.Text;
+                    string fileName = Path.GetFileName(fileAddress);
+                    string fileSavePath = Path.Combine(saveDirectory, fileName);
+
+                    // Kiểm tra xem hình đã tồn tại trong thư mục Images hay chưa
+                    if (!File.Exists(fileSavePath))
+                    {
+                        try
+                        {
+                            File.Copy(fileAddress, fileSavePath, true); // Sao chép hình vào thư mục Images nếu chưa tồn tại
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+
+                    // Cập nhật đường dẫn hình mới trong text box
+                    txtHinh.Text = fileSavePath;
+
                     int maHang = int.Parse(dgvDS.CurrentRow.Cells["mahang"].Value.ToString());
-                    DTO_SanPham sp = new DTO_SanPham(txtTen.Text, int.Parse(txtSL.Text), float.Parse(txtgiaNhap.Text), float.Parse(txtgiaBan.Text), txtHinh.Text, txtghiChu.Text, txtMaNV.Text);
-
-                    //// Check if the image needs to be updated
-                    //bool isImageUpdated = txtHinh.Text != checkImgUrl;
-
-                    //if (isImageUpdated)
-                    //{
-                    //    // Dispose the current image in PictureBox
-                    //    picbox_anh.Image.Dispose();
-
-                    //    // Ensure the file is not locked by the application
-                    //    GC.Collect();
-                    //    GC.WaitForPendingFinalizers();
-                    //}
+                    DTO_SanPham sp = new DTO_SanPham(txtTen.Text, int.Parse(txtSL.Text), float.Parse(txtgiaNhap.Text), float.Parse(txtgiaBan.Text), txtHinh.Text, txtghiChu.Text, cboMaNV.SelectedValue.ToString());
 
                     if (busSanPham.UpdateSP(sp, maHang))
                     {
-                        //if (isImageUpdated)
-                        //{
-                        //    File.Copy(fileAddress, fileSavePath, true); // Copy the new image to the project directory
-                        //}
-                        if (txtHinh.Text != checkImgUrl)
-                        {
-                            File.Copy(fileAddress, fileSavePath, true); //copy hình vào ứng dụng
-                        }
                         Default();
                         LoadGridView_SanPham();
                         MessageBox.Show("Sửa thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                     }
                     else
                     {
@@ -406,7 +364,7 @@ namespace _1_GUI_QLBH
             txtgiaBan.Clear();
             txtHinh.Clear();
             txtghiChu.Clear();
-            txtMaNV.Clear();
+            cboMaNV.Text = null;
             picbox_anh.Image = null;
 
             txtTen.Enabled = true;
@@ -415,7 +373,7 @@ namespace _1_GUI_QLBH
             txtgiaBan.Enabled = true;
             txtHinh.Enabled = true;
             txtghiChu.Enabled = true;
-            txtMaNV.Enabled = true;
+            cboMaNV.Enabled = true;
             btnMoHinh.Enabled = true;
 
             btnThem.Enabled = false;

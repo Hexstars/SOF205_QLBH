@@ -51,7 +51,7 @@
             txtHinh = new TextBox();
             btnMoHinh = new Button();
             lblMaNV = new Label();
-            txtMaNV = new TextBox();
+            cboMaNV = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvDS).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picbox_anh).BeginInit();
             SuspendLayout();
@@ -60,7 +60,7 @@
             // 
             txtTim.Anchor = AnchorStyles.Bottom;
             txtTim.BackColor = Color.LightGray;
-            txtTim.Location = new Point(433, 507);
+            txtTim.Location = new Point(523, 657);
             txtTim.Name = "txtTim";
             txtTim.Size = new Size(178, 26);
             txtTim.TabIndex = 23;
@@ -70,7 +70,7 @@
             // btnTim
             // 
             btnTim.Anchor = AnchorStyles.Bottom;
-            btnTim.Location = new Point(617, 499);
+            btnTim.Location = new Point(707, 649);
             btnTim.Name = "btnTim";
             btnTim.Size = new Size(86, 41);
             btnTim.TabIndex = 22;
@@ -81,7 +81,7 @@
             // btnLamMoi
             // 
             btnLamMoi.Anchor = AnchorStyles.Bottom;
-            btnLamMoi.Location = new Point(709, 546);
+            btnLamMoi.Location = new Point(799, 696);
             btnLamMoi.Name = "btnLamMoi";
             btnLamMoi.Size = new Size(86, 41);
             btnLamMoi.TabIndex = 21;
@@ -92,7 +92,7 @@
             // btnLuu
             // 
             btnLuu.Anchor = AnchorStyles.Bottom;
-            btnLuu.Location = new Point(617, 546);
+            btnLuu.Location = new Point(707, 696);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(86, 41);
             btnLuu.TabIndex = 20;
@@ -103,7 +103,7 @@
             // btnSua
             // 
             btnSua.Anchor = AnchorStyles.Bottom;
-            btnSua.Location = new Point(525, 546);
+            btnSua.Location = new Point(615, 696);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(86, 41);
             btnSua.TabIndex = 19;
@@ -114,7 +114,7 @@
             // btnXoa
             // 
             btnXoa.Anchor = AnchorStyles.Bottom;
-            btnXoa.Location = new Point(433, 546);
+            btnXoa.Location = new Point(523, 696);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(86, 41);
             btnXoa.TabIndex = 18;
@@ -125,7 +125,7 @@
             // btnThem
             // 
             btnThem.Anchor = AnchorStyles.Bottom;
-            btnThem.Location = new Point(341, 546);
+            btnThem.Location = new Point(431, 696);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(86, 41);
             btnThem.TabIndex = 17;
@@ -140,11 +140,11 @@
             dgvDS.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvDS.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDS.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDS.Location = new Point(12, 250);
+            dgvDS.Location = new Point(12, 298);
             dgvDS.Name = "dgvDS";
             dgvDS.ReadOnly = true;
             dgvDS.RowHeadersWidth = 47;
-            dgvDS.Size = new Size(1091, 244);
+            dgvDS.Size = new Size(1271, 329);
             dgvDS.TabIndex = 16;
             dgvDS.Click += dgvDS_Click;
             // 
@@ -152,96 +152,101 @@
             // 
             lblGhiChu.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblGhiChu.AutoSize = true;
-            lblGhiChu.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblGhiChu.Location = new Point(635, 152);
+            lblGhiChu.Font = new Font("Segoe UI", 13.7454548F);
+            lblGhiChu.Location = new Point(616, 186);
             lblGhiChu.Name = "lblGhiChu";
-            lblGhiChu.Size = new Size(69, 23);
+            lblGhiChu.Size = new Size(84, 30);
             lblGhiChu.TabIndex = 29;
             lblGhiChu.Text = "Ghi chú";
             // 
             // txtghiChu
             // 
             txtghiChu.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtghiChu.Location = new Point(706, 149);
+            txtghiChu.Font = new Font("Segoe UI", 13.7454548F);
+            txtghiChu.Location = new Point(710, 186);
             txtghiChu.Multiline = true;
             txtghiChu.Name = "txtghiChu";
-            txtghiChu.Size = new Size(228, 55);
+            txtghiChu.Size = new Size(330, 85);
             txtghiChu.TabIndex = 28;
             // 
             // lblTen
             // 
             lblTen.AutoSize = true;
-            lblTen.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTen.Location = new Point(66, 79);
+            lblTen.Font = new Font("Segoe UI", 13.7454548F);
+            lblTen.Location = new Point(85, 69);
             lblTen.Name = "lblTen";
-            lblTen.Size = new Size(80, 23);
+            lblTen.Size = new Size(98, 30);
             lblTen.TabIndex = 27;
             lblTen.Text = "Tên hàng";
             // 
             // txtTen
             // 
-            txtTen.Location = new Point(191, 79);
+            txtTen.Font = new Font("Segoe UI", 13.7454548F);
+            txtTen.Location = new Point(231, 66);
             txtTen.Name = "txtTen";
-            txtTen.Size = new Size(183, 26);
+            txtTen.Size = new Size(271, 35);
             txtTen.TabIndex = 26;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(66, 143);
+            label1.Font = new Font("Segoe UI", 13.7454548F);
+            label1.Location = new Point(85, 151);
             label1.Name = "label1";
-            label1.Size = new Size(114, 23);
+            label1.Size = new Size(140, 30);
             label1.TabIndex = 33;
             label1.Text = "Đơn giá nhập";
             // 
             // txtgiaNhap
             // 
-            txtgiaNhap.Location = new Point(191, 143);
+            txtgiaNhap.Font = new Font("Segoe UI", 13.7454548F);
+            txtgiaNhap.Location = new Point(231, 148);
             txtgiaNhap.Name = "txtgiaNhap";
-            txtgiaNhap.Size = new Size(183, 26);
+            txtgiaNhap.Size = new Size(271, 35);
             txtgiaNhap.TabIndex = 32;
             // 
             // lblSoLuong
             // 
             lblSoLuong.AutoSize = true;
-            lblSoLuong.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSoLuong.Location = new Point(66, 111);
+            lblSoLuong.Font = new Font("Segoe UI", 13.7454548F);
+            lblSoLuong.Location = new Point(85, 110);
             lblSoLuong.Name = "lblSoLuong";
-            lblSoLuong.Size = new Size(78, 23);
+            lblSoLuong.Size = new Size(96, 30);
             lblSoLuong.TabIndex = 31;
             lblSoLuong.Text = "Số lượng";
             // 
             // txtSL
             // 
-            txtSL.Location = new Point(191, 111);
+            txtSL.Font = new Font("Segoe UI", 13.7454548F);
+            txtSL.Location = new Point(231, 107);
             txtSL.Name = "txtSL";
-            txtSL.Size = new Size(183, 26);
+            txtSL.Size = new Size(271, 35);
             txtSL.TabIndex = 30;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(66, 175);
+            label3.Font = new Font("Segoe UI", 13.7454548F);
+            label3.Location = new Point(85, 192);
             label3.Name = "label3";
-            label3.Size = new Size(104, 23);
+            label3.Size = new Size(128, 30);
             label3.TabIndex = 35;
             label3.Text = "Đơn giá bán";
             // 
             // txtgiaBan
             // 
-            txtgiaBan.Location = new Point(191, 175);
+            txtgiaBan.Font = new Font("Segoe UI", 13.7454548F);
+            txtgiaBan.Location = new Point(231, 189);
             txtgiaBan.Name = "txtgiaBan";
-            txtgiaBan.Size = new Size(183, 26);
+            txtgiaBan.Size = new Size(271, 35);
             txtgiaBan.TabIndex = 34;
             // 
             // picbox_anh
             // 
             picbox_anh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            picbox_anh.Location = new Point(945, 85);
+            picbox_anh.Location = new Point(1055, 66);
             picbox_anh.Name = "picbox_anh";
-            picbox_anh.Size = new Size(115, 148);
+            picbox_anh.Size = new Size(158, 208);
             picbox_anh.SizeMode = PictureBoxSizeMode.StretchImage;
             picbox_anh.TabIndex = 36;
             picbox_anh.TabStop = false;
@@ -250,28 +255,29 @@
             // 
             lblHinh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblHinh.AutoSize = true;
-            lblHinh.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblHinh.Location = new Point(635, 88);
+            lblHinh.Font = new Font("Segoe UI", 13.7454548F);
+            lblHinh.Location = new Point(616, 66);
             lblHinh.Name = "lblHinh";
-            lblHinh.Size = new Size(46, 23);
+            lblHinh.Size = new Size(57, 30);
             lblHinh.TabIndex = 38;
             lblHinh.Text = "Hình";
             // 
             // txtHinh
             // 
             txtHinh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtHinh.Location = new Point(706, 85);
+            txtHinh.Font = new Font("Segoe UI", 13.7454548F);
+            txtHinh.Location = new Point(710, 63);
             txtHinh.Multiline = true;
             txtHinh.Name = "txtHinh";
-            txtHinh.Size = new Size(151, 58);
+            txtHinh.Size = new Size(253, 117);
             txtHinh.TabIndex = 37;
             // 
             // btnMoHinh
             // 
             btnMoHinh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnMoHinh.Location = new Point(863, 85);
+            btnMoHinh.Location = new Point(969, 63);
             btnMoHinh.Name = "btnMoHinh";
-            btnMoHinh.Size = new Size(71, 58);
+            btnMoHinh.Size = new Size(71, 61);
             btnMoHinh.TabIndex = 39;
             btnMoHinh.Text = "Mở hình";
             btnMoHinh.UseVisualStyleBackColor = true;
@@ -280,28 +286,31 @@
             // lblMaNV
             // 
             lblMaNV.AutoSize = true;
-            lblMaNV.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblMaNV.Location = new Point(66, 207);
+            lblMaNV.Font = new Font("Segoe UI", 13.7454548F);
+            lblMaNV.Location = new Point(85, 239);
             lblMaNV.Name = "lblMaNV";
-            lblMaNV.Size = new Size(63, 23);
+            lblMaNV.Size = new Size(78, 30);
             lblMaNV.TabIndex = 41;
             lblMaNV.Text = "Mã NV";
             // 
-            // txtMaNV
+            // cboMaNV
             // 
-            txtMaNV.Location = new Point(191, 207);
-            txtMaNV.Name = "txtMaNV";
-            txtMaNV.Size = new Size(183, 26);
-            txtMaNV.TabIndex = 40;
+            cboMaNV.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboMaNV.Font = new Font("Segoe UI", 13.7454548F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cboMaNV.FormattingEnabled = true;
+            cboMaNV.Location = new Point(231, 236);
+            cboMaNV.Name = "cboMaNV";
+            cboMaNV.Size = new Size(139, 38);
+            cboMaNV.TabIndex = 42;
             // 
             // frmSanPham
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1115, 599);
+            ClientSize = new Size(1295, 773);
             ControlBox = false;
+            Controls.Add(cboMaNV);
             Controls.Add(lblMaNV);
-            Controls.Add(txtMaNV);
             Controls.Add(btnMoHinh);
             Controls.Add(lblHinh);
             Controls.Add(txtHinh);
@@ -362,6 +371,6 @@
         private TextBox txtHinh;
         private Button btnMoHinh;
         private Label lblMaNV;
-        private TextBox txtMaNV;
+        private ComboBox cboMaNV;
     }
 }

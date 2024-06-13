@@ -163,15 +163,14 @@ namespace _1_GUI_QLBH
             frmMainQLBH_Load(sender, e);
         }
 
-        frmCapNhatMK doimk;
         private void quênMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmCapNhatMK frm = new frmCapNhatMK();
             if (!CheckExistForm("frmCapNhatMK"))
             {
-                doimk = new frmCapNhatMK();
-                doimk.MdiParent = this;
-                doimk.Show();
-                doimk.FormClosed += new FormClosedEventHandler(frmMainQLBH_FormClosed);
+                frm.MdiParent = this;
+                frm.Show();
+                frm.FormClosed += new FormClosedEventHandler(frmMainQLBH_FormClosed);
             }
             else
             {
@@ -290,6 +289,7 @@ namespace _1_GUI_QLBH
                 frm.WindowState = FormWindowState.Maximized; // Set the form to open maximized
                 frm.Dock = DockStyle.Fill; // Make sure the form fills the parent container
                 frm.Show();
+                frm.StartPosition = FormStartPosition.CenterParent;
             }
             else
             {
@@ -306,6 +306,7 @@ namespace _1_GUI_QLBH
                 frm.WindowState = FormWindowState.Maximized; // Set the form to open maximized
                 frm.Dock = DockStyle.Fill; // Make sure the form fills the parent container
                 frm.Show();
+                frm.StartPosition = FormStartPosition.CenterParent;
             }
             else
             {

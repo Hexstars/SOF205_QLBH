@@ -135,11 +135,11 @@
             dgvDS.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvDS.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDS.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDS.Location = new Point(12, 217);
+            dgvDS.Location = new Point(12, 272);
             dgvDS.Name = "dgvDS";
             dgvDS.ReadOnly = true;
             dgvDS.RowHeadersWidth = 47;
-            dgvDS.Size = new Size(1290, 396);
+            dgvDS.Size = new Size(1290, 341);
             dgvDS.TabIndex = 16;
             dgvDS.Click += dgvDS_Click;
             // 
@@ -148,7 +148,7 @@
             lblDiaChi.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblDiaChi.AutoSize = true;
             lblDiaChi.Font = new Font("Segoe UI", 15.7090912F);
-            lblDiaChi.Location = new Point(861, 45);
+            lblDiaChi.Location = new Point(865, 93);
             lblDiaChi.Name = "lblDiaChi";
             lblDiaChi.Size = new Size(87, 32);
             lblDiaChi.TabIndex = 30;
@@ -160,7 +160,7 @@
             grpGT.Controls.Add(rdoNu);
             grpGT.Controls.Add(rdoNam);
             grpGT.Font = new Font("Segoe UI", 15.7090912F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            grpGT.Location = new Point(861, 127);
+            grpGT.Location = new Point(865, 175);
             grpGT.Name = "grpGT";
             grpGT.Size = new Size(361, 62);
             grpGT.TabIndex = 26;
@@ -193,7 +193,7 @@
             // 
             txtdiaChi.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtdiaChi.Font = new Font("Segoe UI", 13.7454548F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtdiaChi.Location = new Point(976, 42);
+            txtdiaChi.Location = new Point(980, 90);
             txtdiaChi.Multiline = true;
             txtdiaChi.Name = "txtdiaChi";
             txtdiaChi.Size = new Size(246, 79);
@@ -203,7 +203,7 @@
             // 
             lblTen.AutoSize = true;
             lblTen.Font = new Font("Segoe UI", 15.7090912F);
-            lblTen.Location = new Point(82, 90);
+            lblTen.Location = new Point(86, 138);
             lblTen.Name = "lblTen";
             lblTen.Size = new Size(121, 32);
             lblTen.TabIndex = 28;
@@ -212,7 +212,7 @@
             // txtTen
             // 
             txtTen.Font = new Font("Segoe UI", 13.7454548F);
-            txtTen.Location = new Point(214, 89);
+            txtTen.Location = new Point(218, 137);
             txtTen.Name = "txtTen";
             txtTen.Size = new Size(251, 35);
             txtTen.TabIndex = 27;
@@ -221,7 +221,7 @@
             // 
             lblDienThoai.AutoSize = true;
             lblDienThoai.Font = new Font("Segoe UI", 15.7090912F);
-            lblDienThoai.Location = new Point(78, 45);
+            lblDienThoai.Location = new Point(82, 93);
             lblDienThoai.Name = "lblDienThoai";
             lblDienThoai.Size = new Size(125, 32);
             lblDienThoai.TabIndex = 25;
@@ -230,7 +230,7 @@
             // txtDienThoai
             // 
             txtDienThoai.Font = new Font("Segoe UI", 13.7454548F);
-            txtDienThoai.Location = new Point(214, 42);
+            txtDienThoai.Location = new Point(218, 90);
             txtDienThoai.Name = "txtDienThoai";
             txtDienThoai.Size = new Size(251, 35);
             txtDienThoai.TabIndex = 24;
@@ -239,7 +239,7 @@
             // 
             lblMaNV.AutoSize = true;
             lblMaNV.Font = new Font("Segoe UI", 15.7090912F);
-            lblMaNV.Location = new Point(82, 135);
+            lblMaNV.Location = new Point(86, 183);
             lblMaNV.Name = "lblMaNV";
             lblMaNV.Size = new Size(88, 32);
             lblMaNV.TabIndex = 32;
@@ -250,7 +250,7 @@
             cboMaNV.DropDownStyle = ComboBoxStyle.DropDownList;
             cboMaNV.Font = new Font("Segoe UI", 13.7454548F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cboMaNV.FormattingEnabled = true;
-            cboMaNV.Location = new Point(214, 134);
+            cboMaNV.Location = new Point(218, 182);
             cboMaNV.Name = "cboMaNV";
             cboMaNV.Size = new Size(139, 38);
             cboMaNV.TabIndex = 33;

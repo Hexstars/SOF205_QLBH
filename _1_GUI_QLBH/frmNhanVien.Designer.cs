@@ -57,18 +57,19 @@
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(170, 85);
+            txtEmail.Font = new Font("Segoe UI", 13.7454548F);
+            txtEmail.Location = new Point(214, 73);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(251, 26);
+            txtEmail.Size = new Size(251, 35);
             txtEmail.TabIndex = 0;
             // 
             // lblEmail
             // 
             lblEmail.AutoSize = true;
-            lblEmail.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblEmail.Location = new Point(79, 85);
+            lblEmail.Font = new Font("Segoe UI", 13.7454548F);
+            lblEmail.Location = new Point(85, 76);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(51, 23);
+            lblEmail.Size = new Size(63, 30);
             lblEmail.TabIndex = 1;
             lblEmail.Text = "Email";
             // 
@@ -77,9 +78,10 @@
             grpTT.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             grpTT.Controls.Add(rdoNHD);
             grpTT.Controls.Add(rdoHD);
-            grpTT.Location = new Point(758, 175);
+            grpTT.Font = new Font("Microsoft Sans Serif", 13.7454548F);
+            grpTT.Location = new Point(670, 173);
             grpTT.Name = "grpTT";
-            grpTT.Size = new Size(308, 60);
+            grpTT.Size = new Size(372, 91);
             grpTT.TabIndex = 2;
             grpTT.TabStop = false;
             grpTT.Text = "Tình trạng";
@@ -87,9 +89,9 @@
             // rdoNHD
             // 
             rdoNHD.AutoSize = true;
-            rdoNHD.Location = new Point(156, 25);
+            rdoNHD.Location = new Point(171, 42);
             rdoNHD.Name = "rdoNHD";
-            rdoNHD.Size = new Size(137, 23);
+            rdoNHD.Size = new Size(195, 29);
             rdoNHD.TabIndex = 4;
             rdoNHD.TabStop = true;
             rdoNHD.Text = "Ngừng hoạt động";
@@ -98,9 +100,9 @@
             // rdoHD
             // 
             rdoHD.AutoSize = true;
-            rdoHD.Location = new Point(57, 25);
+            rdoHD.Location = new Point(36, 42);
             rdoHD.Name = "rdoHD";
-            rdoHD.Size = new Size(93, 23);
+            rdoHD.Size = new Size(129, 29);
             rdoHD.TabIndex = 3;
             rdoHD.TabStop = true;
             rdoHD.Text = "Hoạt động";
@@ -110,9 +112,10 @@
             // 
             grpVT.Controls.Add(rdoQT);
             grpVT.Controls.Add(rdoNV);
-            grpVT.Location = new Point(113, 174);
+            grpVT.Font = new Font("Microsoft Sans Serif", 13.7454548F);
+            grpVT.Location = new Point(85, 204);
             grpVT.Name = "grpVT";
-            grpVT.Size = new Size(308, 60);
+            grpVT.Size = new Size(380, 60);
             grpVT.TabIndex = 3;
             grpVT.TabStop = false;
             grpVT.Text = "Vai trò";
@@ -120,9 +123,9 @@
             // rdoQT
             // 
             rdoQT.AutoSize = true;
-            rdoQT.Location = new Point(171, 25);
+            rdoQT.Location = new Point(190, 25);
             rdoQT.Name = "rdoQT";
-            rdoQT.Size = new Size(78, 23);
+            rdoQT.Size = new Size(106, 29);
             rdoQT.TabIndex = 4;
             rdoQT.TabStop = true;
             rdoQT.Text = "Quản trị";
@@ -133,7 +136,7 @@
             rdoNV.AutoSize = true;
             rdoNV.Location = new Point(57, 25);
             rdoNV.Name = "rdoNV";
-            rdoNV.Size = new Size(89, 23);
+            rdoNV.Size = new Size(127, 29);
             rdoNV.TabIndex = 3;
             rdoNV.TabStop = true;
             rdoNV.Text = "Nhân viên";
@@ -142,38 +145,39 @@
             // lblTen
             // 
             lblTen.AutoSize = true;
-            lblTen.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTen.Location = new Point(79, 148);
+            lblTen.Font = new Font("Segoe UI", 13.7454548F);
+            lblTen.Location = new Point(85, 158);
             lblTen.Name = "lblTen";
-            lblTen.Size = new Size(85, 23);
+            lblTen.Size = new Size(105, 30);
             lblTen.TabIndex = 5;
             lblTen.Text = "Họ và Tên";
             // 
             // txtTen
             // 
-            txtTen.Location = new Point(170, 149);
+            txtTen.Font = new Font("Segoe UI", 13.7454548F);
+            txtTen.Location = new Point(214, 155);
             txtTen.Name = "txtTen";
-            txtTen.Size = new Size(251, 26);
+            txtTen.Size = new Size(251, 35);
             txtTen.TabIndex = 4;
             // 
             // lblDiaChi
             // 
             lblDiaChi.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblDiaChi.AutoSize = true;
-            lblDiaChi.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDiaChi.Location = new Point(767, 88);
+            lblDiaChi.Font = new Font("Microsoft Sans Serif", 13.7454548F);
+            lblDiaChi.Location = new Point(670, 80);
             lblDiaChi.Name = "lblDiaChi";
-            lblDiaChi.Size = new Size(65, 23);
+            lblDiaChi.Size = new Size(82, 25);
             lblDiaChi.TabIndex = 7;
             lblDiaChi.Text = "Địa Chỉ";
             // 
             // txtdiaChi
             // 
             txtdiaChi.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtdiaChi.Location = new Point(838, 85);
+            txtdiaChi.Location = new Point(758, 73);
             txtdiaChi.Multiline = true;
             txtdiaChi.Name = "txtdiaChi";
-            txtdiaChi.Size = new Size(228, 91);
+            txtdiaChi.Size = new Size(284, 94);
             txtdiaChi.TabIndex = 6;
             // 
             // dgvDS
@@ -183,11 +187,11 @@
             dgvDS.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvDS.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDS.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDS.Location = new Point(12, 246);
+            dgvDS.Location = new Point(12, 282);
             dgvDS.Name = "dgvDS";
             dgvDS.ReadOnly = true;
             dgvDS.RowHeadersWidth = 47;
-            dgvDS.Size = new Size(1109, 287);
+            dgvDS.Size = new Size(1109, 251);
             dgvDS.TabIndex = 8;
             dgvDS.Click += dgvDS_Click;
             // 
@@ -271,18 +275,19 @@
             // lblMK
             // 
             lblMK.AutoSize = true;
-            lblMK.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblMK.Location = new Point(79, 117);
+            lblMK.Font = new Font("Segoe UI", 13.7454548F);
+            lblMK.Location = new Point(85, 117);
             lblMK.Name = "lblMK";
-            lblMK.Size = new Size(82, 23);
+            lblMK.Size = new Size(101, 30);
             lblMK.TabIndex = 17;
             lblMK.Text = "Mật khẩu";
             // 
             // txtMK
             // 
-            txtMK.Location = new Point(170, 117);
+            txtMK.Font = new Font("Segoe UI", 13.7454548F);
+            txtMK.Location = new Point(214, 114);
             txtMK.Name = "txtMK";
-            txtMK.Size = new Size(251, 26);
+            txtMK.Size = new Size(251, 35);
             txtMK.TabIndex = 16;
             // 
             // frmNhanVien
