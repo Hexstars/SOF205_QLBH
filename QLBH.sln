@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_3_DAL_QLBH", "_3_DAL_QLBH\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTO_QLBH", "DTO_QLBH\DTO_QLBH.csproj", "{6CB8BDC9-2964-4C4A-BA7D-177A6C57C712}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_3_DAL_QLBHTests", "_3_DAL_QLBHTests\_3_DAL_QLBHTests.csproj", "{DCF58582-DBA6-4D5B-B7D9-CBC73C481C56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_3_DAL_QLBHTests", "_3_DAL_QLBHTests\_3_DAL_QLBHTests.csproj", "{DCF58582-DBA6-4D5B-B7D9-CBC73C481C56}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{BF68E156-A116-47C2-A6EB-BA3428B7727E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,8 @@ Global
 		{DCF58582-DBA6-4D5B-B7D9-CBC73C481C56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCF58582-DBA6-4D5B-B7D9-CBC73C481C56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCF58582-DBA6-4D5B-B7D9-CBC73C481C56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF68E156-A116-47C2-A6EB-BA3428B7727E}.Debug|Any CPU.ActiveCfg = Debug
+		{BF68E156-A116-47C2-A6EB-BA3428B7727E}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
