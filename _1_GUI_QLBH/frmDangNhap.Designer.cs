@@ -147,7 +147,7 @@
             Controls.Add(txtEmail);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmDangNhap";
-            Text = "frmDangNhap";
+            Text = "Đăng nhập";
             WindowState = FormWindowState.Maximized;
             FormClosed += frmDangNhap_FormClosed;
             Load += frmDangNhap_Load;

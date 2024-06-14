@@ -335,7 +335,7 @@
             Controls.Add(dgvDS);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmSanPham";
-            Text = "frmSanPham";
+            Text = "Sản phẩm";
             WindowState = FormWindowState.Maximized;
             Load += frmSanPham_Load;
             ((System.ComponentModel.ISupportInitialize)dgvDS).EndInit();
