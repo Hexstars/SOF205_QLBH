@@ -68,7 +68,6 @@ namespace _1_GUI_QLBH
 
         public void HienMenu()
         {
-
             thốngKêToolStripMenuItem.Visible = false;
             danhMụcToolStripMenuItem.Visible = false;
             đăngXuấtToolStripMenuItem.Enabled = false;
@@ -90,6 +89,7 @@ namespace _1_GUI_QLBH
                 }
                 else if (vaiTro == "1")
                 {
+                    nhânViênToolStripMenuItem.Visible= true;
                     danhMụcToolStripMenuItem.Visible = true;
                     thốngKêToolStripMenuItem.Visible = true;
                 }

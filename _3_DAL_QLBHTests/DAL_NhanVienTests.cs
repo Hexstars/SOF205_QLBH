@@ -64,7 +64,7 @@ namespace _3_DAL_QLBH.Tests
 
             nv.emailNV = "bao@gmail.com";
             nv.TenNV = "bao";
-            nv.matKhau = "nhanvien";
+            nv.matKhau = "196145663720616991136127245362061123820032";
             nv.vaiTro = 0;
             nv.tinhTrang = 1;
             nv.DiaChi = "HCM";
