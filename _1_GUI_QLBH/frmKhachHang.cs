@@ -146,33 +146,42 @@ namespace _1_GUI_QLBH
             }
             else
             {
-                int intDienThoai;
-                bool isInt = int.TryParse(txtDienThoai.Text.Trim().ToString(), out intDienThoai);
-                string phai = "Nam";
-                if (rdoNu.Checked == true)
+                if (busKH.KiemTraSDT(txtDienThoai.Text))
                 {
-                    phai = "Nữ";
-                }
-
-                if (!isInt || int.Parse(txtDienThoai.Text) < 0) //kiem tra so dien thoai
-                {
-                    MessageBox.Show("Vui lòng nhập đúng đinh dạng số điện thoai!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtDienThoai.Clear();
+                    MessageBox.Show("Số điện thoại đã tồn tại trong hệ thống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtDienThoai.Focus();
                     return;
                 }
                 else
                 {
-                    DTO_KhachHang kh = new DTO_KhachHang(txtDienThoai.Text, txtTen.Text, txtdiaChi.Text, phai, cboMaNV.SelectedValue.ToString());
-                    if (busKH.InsertKH(kh))
+                    int intDienThoai;
+                    bool isInt = int.TryParse(txtDienThoai.Text.Trim().ToString(), out intDienThoai);
+                    string phai = "Nam";
+                    if (rdoNu.Checked == true)
                     {
-                        Default();
-                        LoadGridView_KhachHang();
-                        MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        phai = "Nữ";
+                    }
+
+                    if (!isInt || int.Parse(txtDienThoai.Text) < 0) //kiem tra so dien thoai
+                    {
+                        MessageBox.Show("Vui lòng nhập đúng đinh dạng số điện thoai!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtDienThoai.Clear();
+                        txtDienThoai.Focus();
+                        return;
                     }
                     else
                     {
-                        MessageBox.Show("Thêm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        DTO_KhachHang kh = new DTO_KhachHang(txtDienThoai.Text, txtTen.Text, txtdiaChi.Text, phai, cboMaNV.SelectedValue.ToString());
+                        if (busKH.InsertKH(kh))
+                        {
+                            Default();
+                            LoadGridView_KhachHang();
+                            MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thêm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
             }
@@ -236,41 +245,50 @@ namespace _1_GUI_QLBH
             }
             else
             {
-                int intDienThoai;
-                bool isInt = int.TryParse(txtDienThoai.Text.Trim().ToString(), out intDienThoai);
-                string phai = "Nam";
-                if (rdoNu.Checked == true)
+                if (busKH.KiemTraSDT(txtDienThoai.Text))
                 {
-                    phai = "Nữ";
-                }
-
-                if (!isInt || int.Parse(txtDienThoai.Text) < 0) //kiem tra so dien thoai
-                {
-                    MessageBox.Show("Vui lòng nhập đúng đinh dạng số điện thoai!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtDienThoai.Clear();
+                    MessageBox.Show("Số điện thoại đã tồn tại trong hệ thống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtDienThoai.Focus();
                     return;
                 }
                 else
                 {
-                    DTO_KhachHang kh = new DTO_KhachHang(txtDienThoai.Text, txtTen.Text, txtdiaChi.Text, phai, cboMaNV.SelectedValue.ToString());
-                    if (MessageBox.Show("Bạn có chắc muốn chỉnh sửa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    int intDienThoai;
+                    bool isInt = int.TryParse(txtDienThoai.Text.Trim().ToString(), out intDienThoai);
+                    string phai = "Nam";
+                    if (rdoNu.Checked == true)
                     {
-                        if (busKH.UpdateKH(kh))
-                        {
-                            Default();
-                            LoadGridView_KhachHang();
-                            MessageBox.Show("Sửa thành công!");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Sửa ko thành công!");
-                        }
+                        phai = "Nữ";
+                    }
+
+                    if (!isInt || int.Parse(txtDienThoai.Text) < 0) //kiem tra so dien thoai
+                    {
+                        MessageBox.Show("Vui lòng nhập đúng đinh dạng số điện thoai!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtDienThoai.Clear();
+                        txtDienThoai.Focus();
+                        return;
                     }
                     else
                     {
-                        Default();
-                        LoadGridView_KhachHang();
+                        DTO_KhachHang kh = new DTO_KhachHang(txtDienThoai.Text, txtTen.Text, txtdiaChi.Text, phai, cboMaNV.SelectedValue.ToString());
+                        if (MessageBox.Show("Bạn có chắc muốn chỉnh sửa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            if (busKH.UpdateKH(kh))
+                            {
+                                Default();
+                                LoadGridView_KhachHang();
+                                MessageBox.Show("Sửa thành công!");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Sửa ko thành công!");
+                            }
+                        }
+                        else
+                        {
+                            Default();
+                            LoadGridView_KhachHang();
+                        }
                     }
                 }
             }
