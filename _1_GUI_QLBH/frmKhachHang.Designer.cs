@@ -203,7 +203,7 @@
             // 
             lblTen.AutoSize = true;
             lblTen.Font = new Font("Segoe UI", 15.7090912F);
-            lblTen.Location = new Point(86, 138);
+            lblTen.Location = new Point(82, 138);
             lblTen.Name = "lblTen";
             lblTen.Size = new Size(121, 32);
             lblTen.TabIndex = 28;
@@ -239,7 +239,7 @@
             // 
             lblMaNV.AutoSize = true;
             lblMaNV.Font = new Font("Segoe UI", 15.7090912F);
-            lblMaNV.Location = new Point(86, 183);
+            lblMaNV.Location = new Point(82, 183);
             lblMaNV.Name = "lblMaNV";
             lblMaNV.Size = new Size(88, 32);
             lblMaNV.TabIndex = 32;

@@ -84,7 +84,7 @@ namespace _1_GUI_QLBH
 
             txtEmail.Focus();
         }
-        public bool IsValid(string emailaddress) // check rule email
+        public bool IsValid(string emailaddress) //kiem tra xem email co hop le khong
         {
             try
             {
@@ -240,6 +240,12 @@ namespace _1_GUI_QLBH
             if (txtEmail.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn phải nhập email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtEmail.Focus();
+                return;
+            }
+            else if (!IsValid(txtEmail.Text.Trim()))
+            {
+                MessageBox.Show("Bạn phải nhập đúng định dạng email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtEmail.Focus();
                 return;
             }
