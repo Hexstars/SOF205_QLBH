@@ -16,6 +16,10 @@ namespace _2_BUS_QLBH
         {
             return dalKH.getKhachHang();
         }
+        public bool KiemTraEmail(string sdt)
+        {
+            return dalKH.kiemTraSDT(sdt);
+        }
         public bool InsertKH(DTO_KhachHang kh)
         {
             return dalKH.insertKH(kh);

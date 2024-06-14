@@ -11,6 +11,31 @@ namespace _3_DAL_QLBH
 {
     public class DAL_KhachHang: DBConnect
     {
+
+
+        public bool kiemTraSDT(string sdt)
+        {
+            try
+            {
+                conn.Open();
+
+                // Sử dụng truy vấn với tham số để tránh SQL injection
+                string sql = "SELECT COUNT(dienthoai) FROM khachhang WHERE dienthoai = @dienthoai";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@dienthoai", sdt);
+
+                int count = (int)cmd.ExecuteScalar();
+                if (count == 1)
+                {
+                    return true;
+                }
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return false;
+        }
         //Danh sách khách hàng
         public DataTable getKhachHang()
         {

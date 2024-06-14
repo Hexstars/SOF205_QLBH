@@ -51,10 +51,10 @@ namespace _3_DAL_QLBH.Tests
             DTO_NhanVien nv = new DTO_NhanVien();
 
             nv.EmailNV = "itzyhd2000@gmail.com";
-            nv.MatKhau = "quantri";
+            nv.MatKhau = "196145663720616991136127245362061123820032";
 
             bool ketqua = login.NhanVienDangNhap(nv);
-            Assert.IsTrue(ketqua , "Đăng nhập thành công");
+            Assert.IsTrue(ketqua , "Đăng nhập thất bại");
         }
 
         [TestMethod()]
