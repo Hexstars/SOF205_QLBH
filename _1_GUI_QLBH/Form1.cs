@@ -124,7 +124,7 @@ namespace _1_GUI_QLBH
 
                 //Thuộc tính này trả về đường dẫn đến thư mục cơ sở của ứng dụng đang chạy.
                 //Trong trường hợp của bạn, nó sẽ trỏ đến thư mục bin\Debug\net8.0-windows.
-                var currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+                var currentDirectory = Application.StartupPath;
 
                 //Phương thức này kết hợp đường dẫn thư mục hiện tại với tên file
                 //để tạo ra đường dẫn đầy đủ đến file.
