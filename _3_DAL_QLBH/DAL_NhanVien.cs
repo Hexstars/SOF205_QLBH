@@ -16,8 +16,11 @@ namespace _3_DAL_QLBH
             try
             {
                 conn.Open();
-                string sql = $"select * from nhanvien where email = '{nhanVien.EmailNV}' and matkhau = '{nhanVien.MatKhau}'";
+                string sql = $"select * from nhanvien where email = @Email and matkhau = @matkhau";
                 SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@Email", nhanVien.EmailNV);
+                cmd.Parameters.AddWithValue("@matkhau", nhanVien.MatKhau);
+
                 if (Convert.ToInt16(cmd.ExecuteScalar()) > 0)
                 {
                     return true;
@@ -35,7 +38,7 @@ namespace _3_DAL_QLBH
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "QuenMatKhau";
-                cmd.Parameters.AddWithValue("email", email);
+                cmd.Parameters.AddWithValue("@email", email);
 
                 if (Convert.ToInt16(cmd.ExecuteScalar()) > 0)
                 {
@@ -55,8 +58,10 @@ namespace _3_DAL_QLBH
             {
                 //Kết nối 
                 conn.Open();
-                string sql = $"select matkhau from nhanvien where email = '{email}'";
+                string sql = $"select matkhau from nhanvien where email = @Email";
                 SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@Email", email);
+
 
                 DataTable dtNhanVien = new DataTable();
                 dtNhanVien.Load(cmd.ExecuteReader());
@@ -95,8 +100,9 @@ namespace _3_DAL_QLBH
             {
                 //Kết nối 
                 conn.Open();
-                string sql = $"select vaitro from nhanvien where email = '{email}'";
+                string sql = $"select vaitro from nhanvien where email = @Email";
                 SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@Email", email);
 
                 DataTable dtNhanVien = new DataTable();
                 dtNhanVien.Load(cmd.ExecuteReader());
@@ -176,12 +182,12 @@ namespace _3_DAL_QLBH
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "InsertNV";
-                cmd.Parameters.AddWithValue("email", nv.emailNV);
-                cmd.Parameters.AddWithValue("tennv", nv.tenNV);
-                cmd.Parameters.AddWithValue("diachi", nv.diaChi);
-                cmd.Parameters.AddWithValue("vaitro", nv.vaiTro);
-                cmd.Parameters.AddWithValue("tinhtrang", nv.tinhTrang);
-                cmd.Parameters.AddWithValue("matkhau", nv.matKhau);
+                cmd.Parameters.AddWithValue("@email", nv.emailNV);
+                cmd.Parameters.AddWithValue("@tennv", nv.tenNV);
+                cmd.Parameters.AddWithValue("@diachi", nv.diaChi);
+                cmd.Parameters.AddWithValue("@vaitro", nv.vaiTro);
+                cmd.Parameters.AddWithValue("@tinhtrang", nv.tinhTrang);
+                cmd.Parameters.AddWithValue("@matkhau", nv.matKhau);
 
                 if (cmd.ExecuteNonQuery() > 0)
                 {
@@ -258,7 +264,6 @@ namespace _3_DAL_QLBH
                 dtNV.Load(cmd.ExecuteReader());
                 return dtNV;
             }
-            catch (Exception ex) { throw ex; }
             finally {conn.Close(); }
         }
     }
