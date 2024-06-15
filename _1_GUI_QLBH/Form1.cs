@@ -90,7 +90,7 @@ namespace _1_GUI_QLBH
                 }
                 else if (vaiTro == "1")
                 {
-                    nhânViênToolStripMenuItem.Visible= true;
+                    nhânViênToolStripMenuItem.Visible = true;
                     danhMụcToolStripMenuItem.Visible = true;
                     thốngKêToolStripMenuItem.Visible = true;
                 }
@@ -112,40 +112,6 @@ namespace _1_GUI_QLBH
             else
             {
                 ActiveChildForm("frmDangNhap");
-            }
-        }
-
-
-        private void hướngDẫnSửDụngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                var fileName = "SOF205_PS40789.docx";
-
-                //Thuộc tính này trả về đường dẫn đến thư mục cơ sở của ứng dụng đang chạy.
-                //Trong trường hợp của bạn, nó sẽ trỏ đến thư mục bin\Debug\net8.0-windows.
-                var currentDirectory = Application.StartupPath;
-
-                //Phương thức này kết hợp đường dẫn thư mục hiện tại với tên file
-                //để tạo ra đường dẫn đầy đủ đến file.
-                //Sử dụng Path.Combine thay vì nối chuỗi trực tiếp giúp tránh
-                //các vấn đề liên quan đến dấu phân cách đường dẫn (\)
-                //và làm cho code hoạt động tốt trên nhiều hệ điều hành.
-                var filePath = Path.Combine(currentDirectory, fileName);
-
-                if (File.Exists(filePath))
-                {
-                    //đảm bảo file được mở bằng ứng dụng mặc định của hệ thống.
-                    Process.Start(new ProcessStartInfo(filePath) { UseShellExecute = true });
-                }
-                else
-                {
-                    MessageBox.Show("File không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lỗi: {ex.Message}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void ResetValue()
@@ -326,6 +292,44 @@ namespace _1_GUI_QLBH
             {
                 ActiveChildForm("frmDoiMK");
             }
+        }
+
+        private void hướngDẫnSửDụngToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var fileName = "SOF205_PS40789.docx";
+
+                //Thuộc tính này trả về đường dẫn đến thư mục cơ sở của ứng dụng đang chạy.
+                //Trong trường hợp của bạn, nó sẽ trỏ đến thư mục bin\Debug\net8.0-windows.
+                var currentDirectory = Application.StartupPath;
+
+                //Phương thức này kết hợp đường dẫn thư mục hiện tại với tên file
+                //để tạo ra đường dẫn đầy đủ đến file.
+                //Sử dụng Path.Combine thay vì nối chuỗi trực tiếp giúp tránh
+                //các vấn đề liên quan đến dấu phân cách đường dẫn (\)
+                //và làm cho code hoạt động tốt trên nhiều hệ điều hành.
+                var filePath = Path.Combine(currentDirectory, fileName);
+
+                if (File.Exists(filePath))
+                {
+                    //đảm bảo file được mở bằng ứng dụng mặc định của hệ thống.
+                    Process.Start(new ProcessStartInfo(filePath) { UseShellExecute = true });
+                }
+                else
+                {
+                    MessageBox.Show("File không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void giớiThiệuPhầnMềmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
