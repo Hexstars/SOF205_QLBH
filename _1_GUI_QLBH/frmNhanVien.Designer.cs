@@ -92,7 +92,7 @@
             rdoNHD.Location = new Point(171, 42);
             rdoNHD.Name = "rdoNHD";
             rdoNHD.Size = new Size(195, 29);
-            rdoNHD.TabIndex = 4;
+            rdoNHD.TabIndex = 7;
             rdoNHD.TabStop = true;
             rdoNHD.Text = "Ngừng hoạt động";
             rdoNHD.UseVisualStyleBackColor = true;
@@ -103,7 +103,7 @@
             rdoHD.Location = new Point(36, 42);
             rdoHD.Name = "rdoHD";
             rdoHD.Size = new Size(129, 29);
-            rdoHD.TabIndex = 3;
+            rdoHD.TabIndex = 6;
             rdoHD.TabStop = true;
             rdoHD.Text = "Hoạt động";
             rdoHD.UseVisualStyleBackColor = true;
@@ -158,7 +158,7 @@
             txtTen.Location = new Point(214, 155);
             txtTen.Name = "txtTen";
             txtTen.Size = new Size(251, 35);
-            txtTen.TabIndex = 4;
+            txtTen.TabIndex = 2;
             // 
             // lblDiaChi
             // 
@@ -178,7 +178,7 @@
             txtdiaChi.Multiline = true;
             txtdiaChi.Name = "txtdiaChi";
             txtdiaChi.Size = new Size(284, 94);
-            txtdiaChi.TabIndex = 6;
+            txtdiaChi.TabIndex = 5;
             // 
             // dgvDS
             // 
@@ -288,7 +288,7 @@
             txtMK.Location = new Point(214, 114);
             txtMK.Name = "txtMK";
             txtMK.Size = new Size(251, 35);
-            txtMK.TabIndex = 16;
+            txtMK.TabIndex = 1;
             // 
             // frmNhanVien
             // 
