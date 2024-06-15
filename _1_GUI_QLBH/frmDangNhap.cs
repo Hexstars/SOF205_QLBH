@@ -83,7 +83,7 @@ namespace _1_GUI_QLBH
 
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
-            frmMainQLBH.session = 1;
+            frmMainQLBH.session = 0;
             // Kiểm tra xem có email đã được lưu không
             if (!string.IsNullOrEmpty(Properties.Settings.Default.SavedEmail))
             {

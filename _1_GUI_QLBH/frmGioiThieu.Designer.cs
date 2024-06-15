@@ -144,6 +144,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmGioiThieu";
             Text = "Giới thiệu phần mềm";
+            Load += frmGioiThieu_Load;
             grpgioiThieu.ResumeLayout(false);
             grpgioiThieu.PerformLayout();
             ResumeLayout(false);

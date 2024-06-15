@@ -16,5 +16,10 @@ namespace _1_GUI_QLBH
         {
             InitializeComponent();
         }
+
+        private void frmGioiThieu_Load(object sender, EventArgs e)
+        {
+            frmMainQLBH.session = 0;
+        }
     }
 }
