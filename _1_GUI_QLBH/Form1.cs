@@ -298,7 +298,7 @@ namespace _1_GUI_QLBH
         {
             try
             {
-                var fileName = "SOF205_PS40789.docx";
+                var fileName = "SOF205_PS40789.pdf";
 
                 //Thuộc tính này trả về đường dẫn đến thư mục cơ sở của ứng dụng đang chạy.
                 //Trong trường hợp của bạn, nó sẽ trỏ đến thư mục bin\Debug\net8.0-windows.
@@ -329,7 +329,19 @@ namespace _1_GUI_QLBH
 
         private void giớiThiệuPhầnMềmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmGioiThieu frm = new frmGioiThieu();
+            if (!CheckExistForm("frmGioiThieu"))
+            {
+                frm.MdiParent = this;
+                frm.WindowState = FormWindowState.Maximized; // Set the form to open maximized
+                frm.Dock = DockStyle.Fill; // Make sure the form fills the parent container
+                frm.Show();
+                frm.StartPosition = FormStartPosition.CenterParent;
+            }
+            else
+            {
+                ActiveChildForm("frmGioiThieu");
+            }
         }
     }
 }
