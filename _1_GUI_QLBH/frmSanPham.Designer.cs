@@ -167,7 +167,7 @@
             txtghiChu.Multiline = true;
             txtghiChu.Name = "txtghiChu";
             txtghiChu.Size = new Size(330, 85);
-            txtghiChu.TabIndex = 28;
+            txtghiChu.TabIndex = 7;
             // 
             // lblTen
             // 
@@ -185,7 +185,7 @@
             txtTen.Location = new Point(231, 66);
             txtTen.Name = "txtTen";
             txtTen.Size = new Size(271, 35);
-            txtTen.TabIndex = 26;
+            txtTen.TabIndex = 0;
             // 
             // label1
             // 
@@ -203,7 +203,7 @@
             txtgiaNhap.Location = new Point(231, 148);
             txtgiaNhap.Name = "txtgiaNhap";
             txtgiaNhap.Size = new Size(271, 35);
-            txtgiaNhap.TabIndex = 32;
+            txtgiaNhap.TabIndex = 2;
             // 
             // lblSoLuong
             // 
@@ -221,7 +221,7 @@
             txtSL.Location = new Point(231, 107);
             txtSL.Name = "txtSL";
             txtSL.Size = new Size(271, 35);
-            txtSL.TabIndex = 30;
+            txtSL.TabIndex = 1;
             // 
             // label3
             // 
@@ -239,14 +239,14 @@
             txtgiaBan.Location = new Point(231, 189);
             txtgiaBan.Name = "txtgiaBan";
             txtgiaBan.Size = new Size(271, 35);
-            txtgiaBan.TabIndex = 34;
+            txtgiaBan.TabIndex = 3;
             // 
             // picbox_anh
             // 
             picbox_anh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            picbox_anh.Location = new Point(1055, 66);
+            picbox_anh.Location = new Point(1055, 63);
             picbox_anh.Name = "picbox_anh";
-            picbox_anh.Size = new Size(158, 208);
+            picbox_anh.Size = new Size(158, 211);
             picbox_anh.SizeMode = PictureBoxSizeMode.StretchImage;
             picbox_anh.TabIndex = 36;
             picbox_anh.TabStop = false;
@@ -270,7 +270,7 @@
             txtHinh.Multiline = true;
             txtHinh.Name = "txtHinh";
             txtHinh.Size = new Size(253, 117);
-            txtHinh.TabIndex = 37;
+            txtHinh.TabIndex = 5;
             // 
             // btnMoHinh
             // 
@@ -278,7 +278,7 @@
             btnMoHinh.Location = new Point(969, 63);
             btnMoHinh.Name = "btnMoHinh";
             btnMoHinh.Size = new Size(71, 61);
-            btnMoHinh.TabIndex = 39;
+            btnMoHinh.TabIndex = 6;
             btnMoHinh.Text = "Mở hình";
             btnMoHinh.UseVisualStyleBackColor = true;
             btnMoHinh.Click += btnMoHinh_Click;
@@ -301,7 +301,7 @@
             cboMaNV.Location = new Point(231, 236);
             cboMaNV.Name = "cboMaNV";
             cboMaNV.Size = new Size(139, 38);
-            cboMaNV.TabIndex = 42;
+            cboMaNV.TabIndex = 4;
             // 
             // frmSanPham
             // 

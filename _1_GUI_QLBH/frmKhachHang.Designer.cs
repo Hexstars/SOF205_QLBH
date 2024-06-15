@@ -173,7 +173,7 @@
             rdoNu.Location = new Point(232, 20);
             rdoNu.Name = "rdoNu";
             rdoNu.Size = new Size(64, 36);
-            rdoNu.TabIndex = 4;
+            rdoNu.TabIndex = 5;
             rdoNu.TabStop = true;
             rdoNu.Text = "Nữ";
             rdoNu.UseVisualStyleBackColor = true;
@@ -184,7 +184,7 @@
             rdoNam.Location = new Point(83, 20);
             rdoNam.Name = "rdoNam";
             rdoNam.Size = new Size(83, 36);
-            rdoNam.TabIndex = 3;
+            rdoNam.TabIndex = 4;
             rdoNam.TabStop = true;
             rdoNam.Text = "Nam";
             rdoNam.UseVisualStyleBackColor = true;
@@ -197,7 +197,7 @@
             txtdiaChi.Multiline = true;
             txtdiaChi.Name = "txtdiaChi";
             txtdiaChi.Size = new Size(246, 79);
-            txtdiaChi.TabIndex = 29;
+            txtdiaChi.TabIndex = 3;
             // 
             // lblTen
             // 
@@ -215,7 +215,7 @@
             txtTen.Location = new Point(218, 137);
             txtTen.Name = "txtTen";
             txtTen.Size = new Size(251, 35);
-            txtTen.TabIndex = 27;
+            txtTen.TabIndex = 1;
             // 
             // lblDienThoai
             // 
@@ -233,7 +233,7 @@
             txtDienThoai.Location = new Point(218, 90);
             txtDienThoai.Name = "txtDienThoai";
             txtDienThoai.Size = new Size(251, 35);
-            txtDienThoai.TabIndex = 24;
+            txtDienThoai.TabIndex = 0;
             // 
             // lblMaNV
             // 
@@ -253,7 +253,7 @@
             cboMaNV.Location = new Point(218, 182);
             cboMaNV.Name = "cboMaNV";
             cboMaNV.Size = new Size(139, 38);
-            cboMaNV.TabIndex = 33;
+            cboMaNV.TabIndex = 2;
             // 
             // frmKhachHang
             // 
