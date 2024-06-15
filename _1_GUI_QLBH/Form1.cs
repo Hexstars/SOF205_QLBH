@@ -298,7 +298,7 @@ namespace _1_GUI_QLBH
         {
             try
             {
-                var fileName = "SOF205_PS40789.pdf";
+                var fileName = "HDSD.pdf";
 
                 //Thuộc tính này trả về đường dẫn đến thư mục cơ sở của ứng dụng đang chạy.
                 //Trong trường hợp của bạn, nó sẽ trỏ đến thư mục bin\Debug\net8.0-windows.

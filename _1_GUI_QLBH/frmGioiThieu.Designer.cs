@@ -35,6 +35,8 @@
             lblThongTin = new Label();
             lbldiaChi = new Label();
             lblEmail = new Label();
+            grpgioiThieu = new GroupBox();
+            grpgioiThieu.SuspendLayout();
             SuspendLayout();
             // 
             // lblTen
@@ -42,7 +44,7 @@
             lblTen.Anchor = AnchorStyles.Top;
             lblTen.AutoSize = true;
             lblTen.Font = new Font("Segoe UI", 24.2181816F, FontStyle.Bold);
-            lblTen.Location = new Point(43, 409);
+            lblTen.Location = new Point(44, 460);
             lblTen.Name = "lblTen";
             lblTen.Size = new Size(663, 50);
             lblTen.TabIndex = 0;
@@ -53,7 +55,7 @@
             lbltenPM.Anchor = AnchorStyles.Top;
             lbltenPM.AutoSize = true;
             lbltenPM.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbltenPM.Location = new Point(328, 35);
+            lbltenPM.Location = new Point(196, 100);
             lbltenPM.Name = "lbltenPM";
             lbltenPM.Size = new Size(636, 74);
             lbltenPM.TabIndex = 1;
@@ -64,7 +66,7 @@
             lblcongTy.Anchor = AnchorStyles.Top;
             lblcongTy.AutoSize = true;
             lblcongTy.Font = new Font("Segoe UI", 24.2181816F, FontStyle.Bold);
-            lblcongTy.Location = new Point(43, 274);
+            lblcongTy.Location = new Point(44, 325);
             lblcongTy.Name = "lblcongTy";
             lblcongTy.Size = new Size(495, 50);
             lblcongTy.TabIndex = 2;
@@ -75,7 +77,7 @@
             lbllienHe.Anchor = AnchorStyles.Top;
             lbllienHe.AutoSize = true;
             lbllienHe.Font = new Font("Segoe UI", 24.2181816F, FontStyle.Bold);
-            lbllienHe.Location = new Point(43, 476);
+            lbllienHe.Location = new Point(44, 527);
             lbllienHe.Name = "lbllienHe";
             lbllienHe.Size = new Size(487, 50);
             lbllienHe.TabIndex = 3;
@@ -86,7 +88,7 @@
             lblThongTin.Anchor = AnchorStyles.Top;
             lblThongTin.AutoSize = true;
             lblThongTin.Font = new Font("Segoe UI", 36F);
-            lblThongTin.Location = new Point(43, 182);
+            lblThongTin.Location = new Point(44, 233);
             lblThongTin.Name = "lblThongTin";
             lblThongTin.Size = new Size(527, 74);
             lblThongTin.TabIndex = 4;
@@ -97,7 +99,7 @@
             lbldiaChi.Anchor = AnchorStyles.Top;
             lbldiaChi.AutoSize = true;
             lbldiaChi.Font = new Font("Segoe UI", 24.2181816F, FontStyle.Bold);
-            lbldiaChi.Location = new Point(43, 341);
+            lbldiaChi.Location = new Point(44, 392);
             lbldiaChi.Name = "lbldiaChi";
             lbldiaChi.Size = new Size(434, 50);
             lbldiaChi.TabIndex = 5;
@@ -108,11 +110,29 @@
             lblEmail.Anchor = AnchorStyles.Top;
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Segoe UI", 24.2181816F, FontStyle.Bold);
-            lblEmail.Location = new Point(43, 540);
+            lblEmail.Location = new Point(44, 591);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(619, 50);
             lblEmail.TabIndex = 6;
             lblEmail.Text = "EMAIL: baotnps40789@gmail.com";
+            // 
+            // grpgioiThieu
+            // 
+            grpgioiThieu.Anchor = AnchorStyles.Top;
+            grpgioiThieu.Controls.Add(lblThongTin);
+            grpgioiThieu.Controls.Add(lblEmail);
+            grpgioiThieu.Controls.Add(lblTen);
+            grpgioiThieu.Controls.Add(lbldiaChi);
+            grpgioiThieu.Controls.Add(lbltenPM);
+            grpgioiThieu.Controls.Add(lblcongTy);
+            grpgioiThieu.Controls.Add(lbllienHe);
+            grpgioiThieu.Font = new Font("Segoe UI", 20.2909088F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            grpgioiThieu.Location = new Point(115, 53);
+            grpgioiThieu.Name = "grpgioiThieu";
+            grpgioiThieu.Size = new Size(957, 680);
+            grpgioiThieu.TabIndex = 0;
+            grpgioiThieu.TabStop = false;
+            grpgioiThieu.Text = "GIỚI THIỆU";
             // 
             // frmGioiThieu
             // 
@@ -120,18 +140,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1187, 822);
             ControlBox = false;
-            Controls.Add(lblEmail);
-            Controls.Add(lbldiaChi);
-            Controls.Add(lblThongTin);
-            Controls.Add(lbllienHe);
-            Controls.Add(lblcongTy);
-            Controls.Add(lbltenPM);
-            Controls.Add(lblTen);
+            Controls.Add(grpgioiThieu);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmGioiThieu";
             Text = "Giới thiệu phần mềm";
+            grpgioiThieu.ResumeLayout(false);
+            grpgioiThieu.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -143,5 +158,6 @@
         private Label lblThongTin;
         private Label lbldiaChi;
         private Label lblEmail;
+        private GroupBox grpgioiThieu;
     }
 }
