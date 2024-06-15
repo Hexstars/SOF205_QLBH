@@ -25,6 +25,7 @@ namespace _1_GUI_QLBH
         private void frmCapNhatMK_Load(object sender, EventArgs e)
         {
             frmMainQLBH.session = 0;
+            txtEmail.Text = Properties.Settings.Default.SavedEmail;
         }
         private void btnCapNhat_Click(object sender, EventArgs e)
         {

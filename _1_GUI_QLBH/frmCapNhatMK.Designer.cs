@@ -89,35 +89,39 @@
             // txtEmail
             // 
             txtEmail.Anchor = AnchorStyles.Top;
+            txtEmail.Font = new Font("Segoe UI", 13.7454548F);
             txtEmail.Location = new Point(438, 160);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(240, 26);
+            txtEmail.Size = new Size(240, 35);
             txtEmail.TabIndex = 4;
             // 
             // txtMaXN
             // 
             txtMaXN.Anchor = AnchorStyles.Top;
+            txtMaXN.Font = new Font("Segoe UI", 13.7454548F);
             txtMaXN.Location = new Point(438, 223);
             txtMaXN.Name = "txtMaXN";
-            txtMaXN.Size = new Size(240, 26);
+            txtMaXN.Size = new Size(240, 35);
             txtMaXN.TabIndex = 5;
             // 
             // txtMKmoi1
             // 
             txtMKmoi1.Anchor = AnchorStyles.Top;
+            txtMKmoi1.Font = new Font("Segoe UI", 13.7454548F);
             txtMKmoi1.Location = new Point(438, 288);
             txtMKmoi1.Name = "txtMKmoi1";
             txtMKmoi1.PasswordChar = '*';
-            txtMKmoi1.Size = new Size(240, 26);
+            txtMKmoi1.Size = new Size(240, 35);
             txtMKmoi1.TabIndex = 6;
             // 
             // txtMKmoi2
             // 
             txtMKmoi2.Anchor = AnchorStyles.Top;
+            txtMKmoi2.Font = new Font("Segoe UI", 13.7454548F);
             txtMKmoi2.Location = new Point(438, 349);
             txtMKmoi2.Name = "txtMKmoi2";
             txtMKmoi2.PasswordChar = '*';
-            txtMKmoi2.Size = new Size(240, 26);
+            txtMKmoi2.Size = new Size(240, 35);
             txtMKmoi2.TabIndex = 7;
             // 
             // btnCapNhat
@@ -154,7 +158,7 @@
             btnGuiMa.BackColor = Color.LimeGreen;
             btnGuiMa.Font = new Font("Segoe UI", 13.7454548F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnGuiMa.ForeColor = Color.White;
-            btnGuiMa.Location = new Point(684, 212);
+            btnGuiMa.Location = new Point(684, 219);
             btnGuiMa.Name = "btnGuiMa";
             btnGuiMa.Size = new Size(120, 45);
             btnGuiMa.TabIndex = 10;
