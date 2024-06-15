@@ -38,6 +38,7 @@
             lblMKcu = new Label();
             lblEmail = new Label();
             lblDN = new Label();
+            btnThoat = new Button();
             SuspendLayout();
             // 
             // btnCapNhat
@@ -60,6 +61,7 @@
             txtMKmoi2.Font = new Font("Segoe UI", 11.7818184F);
             txtMKmoi2.Location = new Point(420, 348);
             txtMKmoi2.Name = "txtMKmoi2";
+            txtMKmoi2.PasswordChar = '*';
             txtMKmoi2.Size = new Size(331, 31);
             txtMKmoi2.TabIndex = 17;
             // 
@@ -69,6 +71,7 @@
             txtMKmoi1.Font = new Font("Segoe UI", 11.7818184F);
             txtMKmoi1.Location = new Point(420, 287);
             txtMKmoi1.Name = "txtMKmoi1";
+            txtMKmoi1.PasswordChar = '*';
             txtMKmoi1.Size = new Size(331, 31);
             txtMKmoi1.TabIndex = 16;
             // 
@@ -78,6 +81,7 @@
             txtMKcu.Font = new Font("Segoe UI", 11.7818184F);
             txtMKcu.Location = new Point(420, 222);
             txtMKcu.Name = "txtMKcu";
+            txtMKcu.PasswordChar = '*';
             txtMKcu.Size = new Size(331, 31);
             txtMKcu.TabIndex = 15;
             // 
@@ -145,12 +149,27 @@
             lblDN.TabIndex = 20;
             lblDN.Text = "ĐỔI MẬT KHẨU";
             // 
+            // btnThoat
+            // 
+            btnThoat.Anchor = AnchorStyles.Top;
+            btnThoat.BackColor = Color.LimeGreen;
+            btnThoat.Font = new Font("Segoe UI", 18.3272724F);
+            btnThoat.ForeColor = Color.White;
+            btnThoat.Location = new Point(470, 460);
+            btnThoat.Name = "btnThoat";
+            btnThoat.Size = new Size(240, 55);
+            btnThoat.TabIndex = 21;
+            btnThoat.Text = "Thoát";
+            btnThoat.UseVisualStyleBackColor = false;
+            btnThoat.Click += btnThoat_Click;
+            // 
             // frmDoiMK
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1146, 696);
             ControlBox = false;
+            Controls.Add(btnThoat);
             Controls.Add(lblDN);
             Controls.Add(btnCapNhat);
             Controls.Add(txtMKmoi2);
@@ -181,5 +200,6 @@
         private Label lblMKcu;
         private Label lblEmail;
         private Label lblDN;
+        private Button btnThoat;
     }
 }

@@ -168,6 +168,10 @@ namespace _1_GUI_QLBH
             }
         }
 
+
+        // Khai báo biến để lưu email hiện tại của nhân viên
+        private string currentEmail;
+
         private void dgvDS_Click(object sender, EventArgs e)
         {
             if (dgvDS.Rows.Count > 1)
@@ -184,7 +188,9 @@ namespace _1_GUI_QLBH
                 btnSua.Enabled = true;
                 btnXoa.Enabled = true;
 
-                txtEmail.Text = dgvDS.CurrentRow.Cells["email"].Value.ToString();
+                currentEmail = dgvDS.CurrentRow.Cells["email"].Value.ToString(); // Lưu email hiện tại
+
+                txtEmail.Text = currentEmail;
                 txtMK.Text = dgvDS.CurrentRow.Cells["MatKhau"].Value.ToString();
                 txtTen.Text = dgvDS.CurrentRow.Cells["TenNV"].Value.ToString();
                 txtdiaChi.Text = dgvDS.CurrentRow.Cells["DiaChi"].Value.ToString();
@@ -269,7 +275,8 @@ namespace _1_GUI_QLBH
             }
             else
             {
-                if (busNhanVien.KiemTraEmail(txtEmail.Text))
+                //Nếu email mới khác với email hiện tại, kiểm tra xem email mới có tồn tại trong hệ thống hay không
+                if (txtEmail.Text != currentEmail && busNhanVien.KiemTraEmail(txtEmail.Text))
                 {
                     MessageBox.Show("Email đã tồn tại trong hệ thống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtEmail.Focus();
@@ -325,12 +332,13 @@ namespace _1_GUI_QLBH
             if (ds.Rows.Count > 0) //founded
             {
                 dgvDS.DataSource = ds;
-                dgvDS.Columns[0].HeaderText = "Email";
-                dgvDS.Columns[0].HeaderText = "Tên nhân viên";
-                dgvDS.Columns[0].HeaderText = "Địa chỉ";
-                dgvDS.Columns[0].HeaderText = "Vai trò";
-                dgvDS.Columns[0].HeaderText = "Tình trạng";
-                dgvDS.Columns[0].HeaderText = "Mật khẩu";
+                dgvDS.Columns[0].HeaderText = "Mã NV";
+                dgvDS.Columns[1].HeaderText = "Email";
+                dgvDS.Columns[2].HeaderText = "Tên NV";
+                dgvDS.Columns[3].HeaderText = "Địa chỉ";
+                dgvDS.Columns[4].HeaderText = "Vai Trò";
+                dgvDS.Columns[5].HeaderText = "Tình Trạng";
+                dgvDS.Columns[6].HeaderText = "Mật khẩu";
             }
             else
             {

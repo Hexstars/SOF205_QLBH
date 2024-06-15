@@ -86,6 +86,9 @@ namespace _1_GUI_QLBH
             cboMaNV.DisplayMember = "manv";
             cboMaNV.ValueMember = "manv";
         }
+
+        // Khai báo biến để lưu email hiện tại của nhân viên
+        private string currentPhone;
         private void dgvDS_Click(object sender, EventArgs e)
         {
             if (dgvDS.Rows.Count > 0)
@@ -99,8 +102,13 @@ namespace _1_GUI_QLBH
 
                 btnSua.Enabled = true;
                 btnXoa.Enabled = true;
+
+
                 //Show data from selected row to controls
-                txtDienThoai.Text = dgvDS.CurrentRow.Cells["dienthoai"].Value.ToString();
+
+                currentPhone = dgvDS.CurrentRow.Cells["dienthoai"].Value.ToString();
+
+                txtDienThoai.Text = currentPhone;
                 txtTen.Text = dgvDS.CurrentRow.Cells["tenkhach"].Value.ToString();
                 txtdiaChi.Text = dgvDS.CurrentRow.Cells["DiaChi"].Value.ToString();
                 cboMaNV.SelectedValue = dgvDS.CurrentRow.Cells["MaNV"].Value.ToString();
@@ -245,7 +253,7 @@ namespace _1_GUI_QLBH
             }
             else
             {
-                if (busKH.KiemTraSDT(txtDienThoai.Text))
+                if (txtDienThoai.Text != currentPhone && busKH.KiemTraSDT(txtDienThoai.Text))
                 {
                     MessageBox.Show("Số điện thoại đã tồn tại trong hệ thống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtDienThoai.Focus();
@@ -308,10 +316,10 @@ namespace _1_GUI_QLBH
             {
                 dgvDS.DataSource = ds;
                 dgvDS.Columns[0].HeaderText = "Điện thoại";
-                dgvDS.Columns[0].HeaderText = "Họ tên";
-                dgvDS.Columns[0].HeaderText = "Địa chỉ";
-                dgvDS.Columns[0].HeaderText = "Phái";
-                dgvDS.Columns[0].HeaderText = "Mã NV";
+                dgvDS.Columns[1].HeaderText = "Họ tên";
+                dgvDS.Columns[2].HeaderText = "Địa chỉ";
+                dgvDS.Columns[3].HeaderText = "Phái";
+                dgvDS.Columns[4].HeaderText = "Mã NV";
             }
             else
             {

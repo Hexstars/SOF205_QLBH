@@ -75,5 +75,10 @@ namespace _1_GUI_QLBH
                 }
             }
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

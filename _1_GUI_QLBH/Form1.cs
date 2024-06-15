@@ -50,8 +50,18 @@ namespace _1_GUI_QLBH
                 }
             }
         }
+        private void CloseAllChildForms()
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
+        }
         private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Đóng các form trước
+            CloseAllChildForms();
+
             dn = new frmDangNhap();
             if (!CheckExistForm("frmDangNhap"))
             {
@@ -137,6 +147,11 @@ namespace _1_GUI_QLBH
                 đăngNhậpToolStripMenuItem.Enabled = true;
             }
         }
+        private void frmDoiMK_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Refresh();
+            frmMainQLBH_Load(sender, e);
+        }
         private void frmDangNhap_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Refresh();
@@ -150,7 +165,7 @@ namespace _1_GUI_QLBH
             {
                 frm.MdiParent = this;
                 frm.Show();
-                frm.FormClosed += new FormClosedEventHandler(frmMainQLBH_FormClosed);
+                frm.FormClosed += new FormClosedEventHandler(frmDoiMK_FormClosed);
             }
             else
             {
@@ -165,6 +180,9 @@ namespace _1_GUI_QLBH
         }
         private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Đóng các form trước
+            CloseAllChildForms();
+
             frmSanPham frm = new frmSanPham();
             if (!CheckExistForm("frmSanPham"))
             {
@@ -181,6 +199,9 @@ namespace _1_GUI_QLBH
 
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Đóng các form trước
+            CloseAllChildForms();
+
             frmNhanVien frm = new frmNhanVien();
             if (!CheckExistForm("frmNhanVien"))
             {
@@ -210,7 +231,7 @@ namespace _1_GUI_QLBH
             HienMenu();
             // Hiện login
             frmDangNhap frm = new frmDangNhap();
-            if (!CheckExistForm("frmNhanVien"))
+            if (!CheckExistForm("frmDangNhap"))
             {
                 frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized; // Set the form to open maximized
@@ -219,7 +240,7 @@ namespace _1_GUI_QLBH
             }
             else
             {
-                ActiveChildForm("frmNhanVien");
+                ActiveChildForm("frmDangNhap");
             }
         }
 
@@ -230,6 +251,9 @@ namespace _1_GUI_QLBH
 
         private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Đóng các form trước
+            CloseAllChildForms();
+
             frmKhachHang frm = new frmKhachHang();
             if (!CheckExistForm("frmKhachHang"))
             {
@@ -246,6 +270,9 @@ namespace _1_GUI_QLBH
 
         private void sảnPhẩmNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Đóng các form trước
+            CloseAllChildForms();
+
             frmThongKe frm = new frmThongKe();
             if (!CheckExistForm("frmThongKe"))
             {
@@ -262,6 +289,9 @@ namespace _1_GUI_QLBH
 
         private void sảnPhẩmTồnKhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Đóng các form trước
+            CloseAllChildForms();
+
             frmThongKeTonKho frm = new frmThongKeTonKho();
             if (!CheckExistForm("frmThongKeTonKho"))
             {
@@ -329,6 +359,9 @@ namespace _1_GUI_QLBH
 
         private void giớiThiệuPhầnMềmToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Đóng các form trước
+            CloseAllChildForms();
+
             frmGioiThieu frm = new frmGioiThieu();
             if (!CheckExistForm("frmGioiThieu"))
             {
