@@ -103,7 +103,7 @@
             rdoHD.Location = new Point(36, 42);
             rdoHD.Name = "rdoHD";
             rdoHD.Size = new Size(129, 29);
-            rdoHD.TabIndex = 6;
+            rdoHD.TabIndex = 5;
             rdoHD.TabStop = true;
             rdoHD.Text = "Hoạt động";
             rdoHD.UseVisualStyleBackColor = true;
@@ -137,7 +137,7 @@
             rdoNV.Location = new Point(57, 25);
             rdoNV.Name = "rdoNV";
             rdoNV.Size = new Size(127, 29);
-            rdoNV.TabIndex = 3;
+            rdoNV.TabIndex = 4;
             rdoNV.TabStop = true;
             rdoNV.Text = "Nhân viên";
             rdoNV.UseVisualStyleBackColor = true;
@@ -178,7 +178,7 @@
             txtdiaChi.Multiline = true;
             txtdiaChi.Name = "txtdiaChi";
             txtdiaChi.Size = new Size(284, 94);
-            txtdiaChi.TabIndex = 5;
+            txtdiaChi.TabIndex = 3;
             // 
             // dgvDS
             // 
