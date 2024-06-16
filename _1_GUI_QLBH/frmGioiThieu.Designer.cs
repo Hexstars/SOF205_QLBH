@@ -57,9 +57,9 @@
             lbltenPM.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbltenPM.Location = new Point(196, 100);
             lbltenPM.Name = "lbltenPM";
-            lbltenPM.Size = new Size(636, 74);
+            lbltenPM.Size = new Size(579, 74);
             lbltenPM.TabIndex = 1;
-            lbltenPM.Text = "QUẢN LÝ BÁN HÀNG™ ";
+            lbltenPM.Text = "QUẢN LÝ BÁN HÀNG";
             // 
             // lblcongTy
             // 
