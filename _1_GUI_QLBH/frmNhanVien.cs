@@ -232,7 +232,7 @@ namespace _1_GUI_QLBH
                 }
                 else
                 {
-                    MessageBox.Show("Xóa không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Xóa không thành công (khóa ngoại)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
