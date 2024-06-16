@@ -70,9 +70,9 @@ namespace _2_BUS_QLBH
         {
             return dalNV.updateNV(nv, ma);
         }
-        public bool DeleteNV(string ma)
+        public bool DeleteNV(string ma, out string errorMessage)
         {
-            return dalNV.deleteNV(ma);
+            return dalNV.deleteNV(ma, out errorMessage);
         }
         public DataTable SearchNV(string name)
         {

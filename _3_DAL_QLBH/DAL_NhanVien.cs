@@ -228,8 +228,9 @@ namespace _3_DAL_QLBH
         }
 
         //Xóa nhân viên
-        public bool deleteNV(string ma)
+        public bool deleteNV(string ma, out string errorMessage)
         {
+            errorMessage = null;
             try
             {
                 conn.Open();
@@ -243,7 +244,10 @@ namespace _3_DAL_QLBH
                     return true;
                 }
             }
-            catch (Exception ex) { throw ex; }
+            catch (SqlException ex)
+            {
+                errorMessage = ex.Message;
+            }
             finally { conn.Close(); }
             return false;
         }

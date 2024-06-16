@@ -223,7 +223,8 @@ namespace _1_GUI_QLBH
             string ma = dgvDS.CurrentRow.Cells["MaNV"].Value.ToString();
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (busNhanVien.DeleteNV(ma))
+                string errorMessage;
+                if (busNhanVien.DeleteNV(ma, out errorMessage))
                 {
                     LoadGridView_NhanVien();
                     Default();
@@ -231,7 +232,7 @@ namespace _1_GUI_QLBH
                 }
                 else
                 {
-                    MessageBox.Show("Xóa không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Xóa không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
