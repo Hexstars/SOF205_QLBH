@@ -22,6 +22,7 @@ namespace _1_GUI_QLBH
         {
             txtEmail.Enabled = false;
             txtEmail.Text = frmMainQLBH.email;
+            txtMKcu.Focus();
         }
         BUS_NhanVien busNV = new BUS_NhanVien();
         private void btnCapNhat_Click(object sender, EventArgs e)
