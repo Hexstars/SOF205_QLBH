@@ -133,7 +133,7 @@ namespace _1_GUI_QLBH
             }
             else if (cboMaNV.SelectedValue == null)
             {
-                MessageBox.Show("Vui lòng chọn mã nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn mã nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cboMaNV.Focus();
                 return;
             }
@@ -196,8 +196,7 @@ namespace _1_GUI_QLBH
 
         private void dgvDS_Click(object sender, EventArgs e)
         {
-            //// Get the base directory of the project
-            //string baseDirectory = Application.StartupPath;
+            //Lấy vị trí lưu
 
             string saveDirectory = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
             if (dgvDS.Rows.Count > 0)
@@ -224,6 +223,8 @@ namespace _1_GUI_QLBH
                 string relativePath = dgvDS.CurrentRow.Cells["hinhanh"].Value.ToString();
                 string imagePath = Path.Combine(saveDirectory, relativePath.TrimStart('\\')); // Chuyển đổi thành đường dẫn tuyệt đối
 
+
+                //Nếu file đã tồn tại thì gửi ảnh lên picture box
                 if (File.Exists(imagePath))
                 {
                     picbox_anh.Image = Image.FromFile(imagePath);
@@ -240,8 +241,6 @@ namespace _1_GUI_QLBH
                 MessageBox.Show("Bảng trống", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
 
         private void btnSua_Click(object sender, EventArgs e)
         {
