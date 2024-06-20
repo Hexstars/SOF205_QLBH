@@ -129,27 +129,39 @@ namespace _1_GUI_QLBH
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+
+            int intDienThoai;
+
+            //int.TryParse: chuyển chuỗi thành int, nếu thành công thì gán cho intDienThoai (out intDienThoai))
+            bool isInt = int.TryParse(txtDienThoai.Text.Trim(), out intDienThoai);
+
             if (txtDienThoai.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Vui lòng nhập số điện thoai!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập số điện thoai", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtDienThoai.Focus();
+                return;
+            }
+            else if (!isInt || txtDienThoai.Text.Length > 10 || txtDienThoai.Text.Length < 1) // Kiểm tra số điện thoại hợp lệ
+            {
+                MessageBox.Show("Vui lòng nhập đúng định dạng số điện thoại (tối đa 10 chữ số)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtDienThoai.Focus();
                 return;
             }
             else if (txtTen.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Vui lòng nhập tên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập tên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtTen.Focus();
                 return;
             }
             else if (cboMaNV.SelectedValue == null)
             {
-                MessageBox.Show("Vui lòng chọn mã nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn mã nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cboMaNV.Focus();
                 return;
             }
             else if (rdoNam.Checked == false && rdoNu.Checked == false)
             {
-                MessageBox.Show("Vui lòng chọn giới tính", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn giới tính", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
@@ -162,20 +174,10 @@ namespace _1_GUI_QLBH
                 }
                 else
                 {
-                    int intDienThoai;
-                    bool isInt = int.TryParse(txtDienThoai.Text.Trim().ToString(), out intDienThoai);
                     string phai = "Nam";
                     if (rdoNu.Checked == true)
                     {
                         phai = "Nữ";
-                    }
-
-                    if (!isInt || int.Parse(txtDienThoai.Text) < 0) //kiem tra so dien thoai
-                    {
-                        MessageBox.Show("Vui lòng nhập đúng đinh dạng số điện thoai!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtDienThoai.Clear();
-                        txtDienThoai.Focus();
-                        return;
                     }
                     else
                     {
@@ -188,7 +190,7 @@ namespace _1_GUI_QLBH
                         }
                         else
                         {
-                            MessageBox.Show("Thêm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Thêm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }

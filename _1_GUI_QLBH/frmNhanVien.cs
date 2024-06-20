@@ -109,9 +109,16 @@ namespace _1_GUI_QLBH
             {
                 tinhtrang = 1;
             }
+
+            if (txtEmail.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtEmail.Focus();
+                return;
+            }
             else if (!IsValid(txtEmail.Text.Trim()))
             {
-                MessageBox.Show("Bạn phải nhập đúng định dạng email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập đúng định dạng email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Focus();
                 return;
             }
@@ -121,7 +128,6 @@ namespace _1_GUI_QLBH
                 txtTen.Focus();
                 return;
             }
-
             else if (txtdiaChi.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn phải nhập địa chỉ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -246,31 +252,31 @@ namespace _1_GUI_QLBH
         {
             if (txtEmail.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải nhập email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Focus();
                 return;
             }
             else if (!IsValid(txtEmail.Text.Trim()))
             {
-                MessageBox.Show("Bạn phải nhập đúng định dạng email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập đúng định dạng email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Focus();
                 return;
             }
             else if (txtMK.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải nhập mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMK.Focus();
                 return;
             }
             else if (txtTen.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải nhập tên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập tên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtTen.Focus();
                 return;
             }
             else if (txtdiaChi.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải nhập địa chỉ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập địa chỉ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtdiaChi.Focus();
                 return;
             }
